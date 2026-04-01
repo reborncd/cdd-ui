@@ -25,34 +25,6 @@ yarn tem Test
 yarn generate:files
 ～～～
 
-### 设置私有库
-
-#### 私有库
-
-~~~~
-username wangli01
-password Wangli02###
-email walley@126.com
-~~~~
-
-#### 设置
-
-～～～
-npm install nrm -g
-nrm add nexus http://nexus.csntcorp.com/repository/npm-releases/
-nrm use nexus
-npm config set registry http://nexus.csntcorp.com/repository/npm-releases/
-npm login
-yarn install
-～～～
-
-## 推送
-
-～～～
-yarn set registry http://nexus.csntcorp.com/repository/npm-releases/
-yarn publish --registry http://nexus.csntcorp.com/repository/npm-releases/
-～～～
-
 ### @vue/shared
 
 - makeMap: 生成一个类似于Set的对象，用于判断是否存在某个值
