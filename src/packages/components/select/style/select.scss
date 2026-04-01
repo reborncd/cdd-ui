@@ -1,0 +1,44 @@
+@use 'sass:map';
+@use '../../../theme-chalk/mixins/mixins' as *;
+@use '../../../theme-chalk/mixins/utils' as *;
+@use '../../../theme-chalk/mixins/var' as *;
+
+@include b(select) {
+    .iflorens-ui-select-selector {
+        &:focus,
+        &:hover,
+        &:active {
+            border-color: var(--fl-col-fblue5);
+        }
+    }
+    
+}
+
+.iflorens-ui-select-item {
+    &:focus,
+    &:hover,
+    &:active {
+        background-color: var(--fl-col-fblue10) !important;
+    }
+    &:last-child {
+        border: none;
+    }
+    
+
+}
+
+:where(.css-dev-only-do-not-override-xrs1jg).iflorens-ui-select-dropdown .iflorens-ui-select-item-option-active:not(.iflorens-ui-select-item-option-disabled) {
+    background-color: var(--fl-col-fblue10) !important;
+}
+.rc-virtual-list-holder{
+    max-height: 330px !important;
+}
+.rc-virtual-list-scrollbar{
+    display: none !important;
+    background: none !important;
+}
+.rc-virtual-list-scrollbar-thumb{
+    display: none !important;
+    background: none !important;
+}
+

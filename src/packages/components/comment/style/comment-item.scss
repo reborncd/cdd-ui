@@ -1,0 +1,264 @@
+@use 'sass:map';
+@use '../../../theme-chalk/mixins/mixins' as *;
+@use '../../../theme-chalk/mixins/utils' as *;
+@use '../../../theme-chalk/mixins/var' as *;
+
+@include b(comment-content) {
+  width: 100%;
+  height: 100%;
+  padding: 16px 0 ;
+  border-radius: 16px;
+  background: var(--fl-col-background-grey);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  box-sizing: border-box;
+  // 评论列表
+  .right-cnt-top {
+    width: 100%;
+    overflow: auto;
+    padding: 0 16px;
+    .right-cnt-top-cnt {
+      width: 100%;
+      max-width: 1000px;
+      min-height: 100%;
+      margin: auto;
+    }
+    .right-cnt-top-cnt-li {
+      margin-bottom: 16px;
+      &.show-full-screen {
+        width: calc(100% - 32px);
+        height: calc(100% - 32px);
+        position: absolute;
+        left: 16px;
+        top: 16px;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        .item-cnt-text {
+          height: 100% !important;
+          padding: 8px 0 !important;
+          .text-more-el-5 {
+            height: 100% !important;
+            padding: 0 12px !important;
+            overflow: auto !important;
+            -webkit-line-clamp: inherit !important;
+          }
+        }
+        .commentary-item-text-cnt {
+          overflow: hidden;
+        }
+        .coment-item-save {
+          height: calc(100% - 30px) !important;
+          display: flex;
+          flex-direction: column;
+          .commentary-textarea-cnt {
+            flex: 1;
+            min-height: calc(100% - 62px) !important;
+            .commentary-textarea-textarea {
+              min-height: 100% !important;
+              overflow: auto;
+            }
+          }
+        }
+        
+      }
+    }
+  }
+  .commentary-empty {
+    border: none;
+  }
+  // 底部新增
+  .right-cnt-bottom {
+    width: 100%;
+    padding: 16px 16px 0 16px;
+    z-index: 99;
+    .right-cnt-bottom-cnt {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      .commentary-textarea-cnt {
+        flex: 1;
+      }
+    }
+    &.show-full-screen {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      .right-cnt-bottom-cnt {
+        height: calc(100% - 16px);
+        .comment-content-save {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          height: 100%;
+          &.fl-comment-textarea {
+            .commentary-textarea-cnt {
+              flex: 1;
+              max-height: none;
+              .commentary-textarea-textarea {
+                height: 100% !important;
+                min-height: 100% !important;
+                max-height: 100% !important;
+              }
+            }
+          }
+        }
+        
+      }
+    }
+    .right-cnt-bottom-cnt {
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+    }
+  }
+}
+
+@include b(comment-item) {
+  width: 100%;
+  border-radius: 8px;
+  background: var(--fl-col-background);
+  border: 1px solid var(--fl-col-neutral13);
+  transition: 0.3s;
+  overflow: hidden;
+  box-sizing: border-box;
+  &:hover {
+    border: 1px solid var(--fl-col-fblue5);
+  }
+  @include when(edit) {
+    border: 1px solid var(--fl-col-fblue5);
+  }
+  .commentary-item-head {
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .tooltip-cnt {
+        line-height: 22px;
+    }
+  }
+
+  .commentary-item-head-title {
+    width: fit-content;
+    font-size: 12px;
+    font-weight: bold;
+    font-variation-settings: "wght" 700;
+    color: #6B7184;
+    .head-title-effdate {
+        display: inline-block;
+        padding: 0 12px;
+        border-radius: 8px 0px 8px 0px;
+        background-color: var(--fl-col-orange10);
+        color: var(--fl-col-orange5);
+    }
+    .head-title-creat {
+        margin: 0 4px;
+    }
+  }
+  .right-icon {
+    margin-right: 12px;
+  }
+
+  .cancel-btn {
+    background: var(--fl-col-background-grey);
+    color: var(--fl-col-fblue5);
+    border: none;
+    &:hover {
+        background: var(--fl-col-background-grey);
+        color: var(--fl-col-fblue5);
+    }
+  }
+
+  .text-more-el-5 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    white-space: pre-line;
+    word-break: break-all;
+  }
+  .item-cnt-text {
+    line-height: 22px;
+    padding: 8px 12px ;
+  }
+  .item-cnt-text-foot {
+    padding: 0 12px 8px 12px;
+    .text-foot-btn {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      line-height: 22px;
+      cursor: pointer;
+      color: var(--fl-col-fblue5);
+    }
+  }
+
+  .#{$namespace}-icon {
+    color: var(--fl-col-secondarytext-new) !important;
+    cursor: pointer;
+    font-size: 14px !important;
+  }
+}
+
+@include b(comment-textarea) {
+  width: 100%;
+  border-radius: 8px;
+  background: var(--fl-col-background);
+  border: 1px solid var(--fl-col-neutral13);
+  transition: 0.3s;
+  @include when(edit) {
+    border: 1px solid var(--fl-col-fblue5);
+  }
+  .commentary-textarea-head {
+    padding: 12px 12px 0 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .commentary-textarea-head-tag {
+      width: fit-content;
+      line-height: 22px;
+      padding: 0 8px;
+      border-radius: 2px;
+      background: var(--fl-col-orange10);
+      color: var(--fl-col-orange5);
+    }
+    .#{$namespace}-icon {
+      cursor: pointer;
+      font-size: 14px !important;
+    }
+  }
+  .commentary-textarea-cnt {
+    margin: 8px 4px 0;
+    min-height: 55px;
+    max-height: 148px;
+    overflow: auto;
+    .commentary-textarea-textarea {
+      height: 100%;
+      border: none;
+      resize: none;
+      background-color: inherit;
+      box-shadow: none;
+      line-height: 1.5;
+      // min-height: 80px;
+    }
+  }
+  .commentary-textarea-foot {
+    padding: 12px;
+    display: flex;
+    justify-content: end;
+    .foot-hint {
+      font-size: 12px;
+      color: var(--fl-col-secondarytext-new);
+    }
+    .foot-hint-max {
+      color: var(--fl-col-red5);
+    }
+  }
+}

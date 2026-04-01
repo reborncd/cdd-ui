@@ -1,0 +1,53 @@
+@use 'sass:map';
+@use '../../../theme-chalk/mixins/mixins' as *;
+@use '../../../theme-chalk/mixins/utils' as *;
+@use '../../../theme-chalk/mixins/var' as *;
+
+@include b(anchor) {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  .iflorens-ui-anchor-wrapper {
+    background-color: inherit;
+  }
+  .fl-anchor :where(.css-19iuou).iflorens-ui-anchor-wrapper:not(.iflorens-ui-anchor-wrapper-horizontal) .iflorens-ui-anchor .iflorens-ui-anchor-ink {
+    width: 0 !important;
+    height: 22px !important;
+    border: 1px solid var(--fl-col-orange5) !important;
+  }
+  :where(.css-19iuou).iflorens-ui-anchor-wrapper:not(.iflorens-ui-anchor-wrapper-horizontal) .iflorens-ui-anchor .iflorens-ui-anchor-ink {
+    width: 0 !important;
+    height: 22px !important;
+    border: 1px solid var(--fl-col-orange5) !important;
+  }
+  :where(.css-dev-only-do-not-override-19iuou).iflorens-ui-anchor-wrapper:not(.iflorens-ui-anchor-wrapper-horizontal) .iflorens-ui-anchor::before {
+    width: 2px !important;
+    background: #D9D9D9 !important;
+    border-inline-start: 0px solid rgba(5, 5, 5, 0.06) !important;
+  }
+  :where(.css-dev-only-do-not-override-19iuou).iflorens-ui-anchor-wrapper:not(.iflorens-ui-anchor-wrapper-horizontal) .iflorens-ui-anchor .iflorens-ui-anchor-ink {
+    width: 0 !important;
+    height: 22px !important;
+    border: 1px solid var(--fl-col-orange5) !important;
+  }
+  .iflorens-ui-anchor {
+    padding: 1px 0;
+    .iflorens-ui-anchor-link {
+      height: calc(100% + 6px);
+      top: -8px;
+      font-weight: 500;
+      font-family: Nunito;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .iflorens-ui-anchor-ink::before {
+      background: var(--fl-col-line);
+    }
+    .iflorens-ui-anchor-link-active > .iflorens-ui-anchor-link-title {
+      color: var(--fl-col-orange5);
+    }
+    a:hover {
+      color: var(--fl-col-orange5);
+    }
+  }
+}

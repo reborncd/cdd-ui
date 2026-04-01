@@ -1,0 +1,38 @@
+@use 'sass:map';
+@use '../../../theme-chalk/mixins/mixins' as *;
+@use '../../../theme-chalk/mixins/utils' as *;
+@use '../../../theme-chalk/mixins/var' as *;
+
+@include b(annex) {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid var(--fl-col-line);
+  min-width: 300px;
+  border-radius: 6px;
+  line-height: 20px;
+  .file-content {
+    display: flex;
+    flex-direction: row;
+  }
+  .#{$namespace}-icon {
+    margin-right: 8px;
+  }
+  .file-name {
+    display: block;
+    width: calc(100% - 82px);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 8px;
+  }
+  .right-icon {
+    font-size: 16px !important;
+    cursor: pointer !important;
+    margin-left: 16px;
+    &:nth-child(3) {
+        margin-left: 0px;
+    }
+  }
+}

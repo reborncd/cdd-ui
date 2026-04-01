@@ -1,0 +1,80 @@
+@use 'sass:map';
+@use '../../../theme-chalk/mixins/mixins' as *;
+@use '../../../theme-chalk/mixins/utils' as *;
+@use '../../../theme-chalk/mixins/var' as *;
+
+@include b(tag) {
+  :where(&).iflorens-ui-tag {
+    padding-inline: 8px;
+    margin-inline-end: 0px;
+    margin-bottom: 0px;
+    .iflorens-ui-tag-close-icon {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      color: var(--fl-col-neutral9);
+    }
+    .anticon{
+      font-size: 12px !important;
+    }
+    .anticon.fl-icon {
+      font-size: 12px !important;
+    }
+    :where(&).iflorens-ui-tag >.anticon+span, 
+    :where(&).iflorens-ui-tag >span+.anticon{
+      margin-inline-start:4px;
+    }
+    :where(&).iflorens-ui-tag-borderless {
+      border: 1px solid transparent !important; 
+    }
+    :where(&).iflorens-ui-tag-default {
+      background: var(--fl-col-background-grey);
+      border: 1px solid #d9d9d9;
+      color: var(--fl-col-maintext);
+    }
+    :where(&).iflorens-ui-tag-processing {
+      background: var(--fl-col-blue10);
+      border: 1px solid var(--fl-col-blue8);
+      color: var(--fl-col-blue5);
+    }
+    :where(&).iflorens-ui-tag-error {
+      background: var(--fl-col-red10);
+      border: 1px solid var(--fl-col-red8);
+      color: var(--fl-col-red5);
+    }
+    :where(&).iflorens-ui-tag-warning {
+      background: var(--fl-col-orange10);
+      border: 1px solid var(--fl-col-orange8);
+      color: var(--fl-col-orange5);
+    }
+    :where(&).iflorens-ui-tag-success {
+      background: var(--fl-col-green10);
+      border: 1px solid var(--fl-col-green8);
+      color: var(--fl-col-green5);
+    }
+
+    :where(&).iflorens-ui-tag-cyan {
+      background: var(--fl-col-cyan10);
+      border: 1px solid var(--fl-col-cyan8);
+      color: var(--fl-col-cyan5);
+    }
+    :where(&).iflorens-ui-tag-purple {
+      background: var(--fl-col-purple10);
+      border: 1px solid var(--fl-col-purple8);
+      color: var(--fl-col-purple5);
+    }
+    :where(&).iflorens-ui-tag-magenta {
+      background: var(--fl-col-magenta10);
+      border: 1px solid var(--fl-col-magenta8);
+      color: var(--fl-col-magenta5);
+    }
+    :where(&).iflorens-ui-tag-geekblue {
+      background: var(--fl-col-fblue10);
+      border: 1px solid var(--fl-col-fblue8);
+      color: var(--fl-col-fblue5);
+    }
+  }
+  :where(&).iflorens-ui-tag.iflorens-ui-tag-has-color {
+    color: unset;
+  }
+}

@@ -1,0 +1,42 @@
+@use 'sass:map';
+@use '../../../theme-chalk/mixins/mixins' as *;
+@use '../../../theme-chalk/mixins/utils' as *;
+@use '../../../theme-chalk/mixins/var' as *;
+
+@include b(collect) {
+    display: flex;
+    flex-direction: row;
+    .content-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-flow: nowrap;
+        .content-title-left {
+            font-family: Nunito !important;
+            color: var(--fl-col-maintext);
+            font-size: 20px;
+            font-weight: 700;
+            flex-shrink: 1;
+            white-space: nowrap;
+            font-variation-settings: 'wght' 700;
+            margin-right: 15px;
+        }
+        .content-title-left-darkBlue{
+            background-color: transparent !important;
+            font-family: Nunito;
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 36px;
+            letter-spacing: 0px;
+            font-variation-settings: "opsz" auto;
+            /* 功能色/背景白-N1 */
+            color: #FFFFFF;
+        }
+        .content-title-icon {
+            margin-top: 7px;
+            :where(.iflorens-ui-btn) {
+                align-items: baseline;
+            }
+        }
+    }
+}

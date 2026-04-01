@@ -1,0 +1,47 @@
+@use 'sass:map';
+@use '../../../theme-chalk/mixins/mixins' as *;
+@use '../../../theme-chalk/mixins/utils' as *;
+@use '../../../theme-chalk/mixins/var' as *;
+
+
+@include b(modal) {
+    .iflorens-ui-modal .iflorens-ui-modal-header {
+        border-radius: 16px 16px 0 0;
+    }
+    .iflorens-ui-modal .iflorens-ui-modal-close {
+        top: 16px;
+    }
+    .iflorens-ui-modal .iflorens-ui-modal-content {
+        padding: 0;
+        border-radius: 16px;
+        .iflorens-ui-modal-title {
+            border-bottom: solid 1px var(--fl-col-line);
+            height: 64px;
+            line-height: 64px;
+            padding: 0 24px;
+            box-sizing: border-box;
+        }
+        .iflorens-ui-modal-body {
+            padding: 24px;
+        }
+        .iflorens-ui-modal-footer {
+            border-top: solid 1px var(--fl-col-line);
+            height: 64px;
+            line-height: 64px;
+            padding: 0 24px;
+            margin-top: 0px;
+            box-sizing: border-box;
+            button {
+                padding: 0px 15px;
+            }
+            button.iflorens-ui-btn-default {
+                color: var(--fl-col-fblue5);
+                border: 1px solid var(--fl-col-line);
+            }
+            button.iflorens-ui-btn-primary {
+                background: var(--fl-col-fblue5);
+                color: #fff;
+            }
+        }
+    }
+}

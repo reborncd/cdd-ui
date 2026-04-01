@@ -1,0 +1,84 @@
+@use 'sass:map';
+@use '../../../theme-chalk/mixins/mixins' as *;
+@use '../../../theme-chalk/mixins/utils' as *;
+@use '../../../theme-chalk/mixins/var' as *;
+
+@include b(leaseheader) {
+  padding: 0 0 12px 0;
+  border-bottom: 1px solid var(--fl-col-line);
+  overflow: hidden;
+  .lease-header-cnt {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .lease-header-left {
+    flex-grow: 1;
+    min-width: 0;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    color: var(--fl-col-maintext);
+    .icon-arrow {
+      font-size: 20px;
+      cursor: pointer;
+      margin-right: 16px;
+    }
+    .lease-header-left-title {
+      // max-width: 420px;
+      min-width: 30px;
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      font-weight: 700;
+      font-variation-settings: 'wght' 700;
+      .ellipsis1 {
+        font-weight: 700;
+        font-variation-settings: 'wght' 700;
+      }
+    }
+  }
+  .lease-header-cnt-approval {
+    margin-top: 12px;
+    padding-bottom: 0;
+    border-bottom: none;
+    .lease-header-left {
+      width: 100%;
+      .lease-header-left-title {
+        max-width: calc(100% - 232px);
+      }
+    }
+  }
+}
+// .updown-btn {
+//   .updown-btn-group {
+//     display: inline-flex;
+//   }
+//   .iflorens-ui-btn {
+//     width: 32px;
+//     padding: 0;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+//   .left {
+//     border-top-left-radius: 4px !important;
+//     border-bottom-left-radius: 4px !important;
+//     border-top-right-radius: 0px !important;
+//     border-bottom-right-radius: 0px !important;
+//     .anticon-left {
+//         display: block !important;
+//     }
+//   }
+
+//   .right {
+//     border-top-left-radius: 0px !important;
+//     border-bottom-left-radius: 0px !important;
+//     border-top-right-radius: 4px !important;
+//     border-bottom-right-radius: 4px !important;
+//     .anticon-right {
+//         display: block !important;
+//     }
+//   }
+// }

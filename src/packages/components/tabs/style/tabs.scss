@@ -1,0 +1,435 @@
+@use '../../../theme-chalk/mixins/mixins' as *;
+@use '../../../theme-chalk/common/var' as *;
+@include b(tabs) {
+  @include e(header) {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    &.is-show-header-boder {
+      border-bottom: 1px solid var(--fl-col-line);
+    }
+  }
+  @include m(right) {
+    .#{$namespace}-tabs__header.is-right {
+      &.is-show-header-boder {
+        border: none;
+        border-left: 1px solid var(--fl-col-line);
+      }
+    }
+  }
+  @include m(left) {
+    .#{$namespace}-tabs__header.is-left {
+      &.is-show-header-boder {
+        border: none;
+        border-right: 1px solid var(--fl-col-line);
+      }
+    }
+  }
+  
+  @include e(active-bar) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    border-radius: 4px;
+    background: var(--fl-col-orange5);
+    z-index: 1;
+    list-style: none;
+  }
+  @include e(new-tab) {
+    float: right;
+    border: 1px solid #d3dce6;
+    height: 18px;
+    width: 18px;
+    line-height: 18px;
+    margin: 10px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 12px;
+    color: #d3dce6;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  @include e(nav-wrap) {
+    overflow: hidden;
+    margin-bottom: -1px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: var(--fl-index-normal);
+    }
+
+    @include when(scrollable) {
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+  }
+  @include e(nav-scroll) {
+    overflow: hidden;
+  }
+
+  @include e((nav-next, nav-prev)) {
+    position: absolute;
+    cursor: pointer;
+    line-height: 44px;
+    font-size: 12px;
+  }
+  @include e(nav-next) {
+    top: 4px;
+    right: 0;
+  }
+  @include e(nav-prev) {
+    top: 4px;
+    left: 0;
+  }
+  @include e(nav) {
+    white-space: nowrap;
+    position: relative;
+    transition: transform var(--fl-transition-duration);
+    float: left;
+    z-index: calc(var(--fl-index-normal) + 1);
+
+    @include when(stretch) {
+      min-width: 100%;
+      display: flex;
+      & > * {
+        flex: 1;
+        text-align: center;
+      }
+    }
+  }
+
+  @include e(item) {
+    box-sizing: border-box;
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    height: 46px;
+    line-height: 46px;
+    padding: 0 0 0 32px;
+    font-size: 14px;
+    font-variation-settings: 'wght' 700;
+    font-weight: bold;
+    font-family: Nunito !important;
+
+    &:focus,
+    &:focus:active {
+      outline: none;
+    }
+
+    & .is-icon-close {
+      border-radius: 50%;
+      text-align: center;
+      margin-left: 5px;
+      &:before {
+        transform: scale(0.9);
+        display: inline-block;
+      }
+
+      svg {
+        margin-top: 1px;
+      }
+    }
+
+    @include when(active) {
+      color: var(--fl-col-orange5);
+    }
+
+    &:hover {
+      color: var(--fl-col-orange5);
+      cursor: pointer;
+    }
+
+    @include when(disabled) {
+      color: var(--fl-col-disabledtext);
+      cursor: default;
+    }
+  }
+  // card风格样式
+  @include m(card) {
+    .#{$namespace}-tabs__item {
+      padding: 0;
+      min-width: 92px;
+      height: 38px;
+      line-height: 38px;
+      border-radius: 8px;
+      text-align: center;
+      margin-left: 8px;
+      &:nth-child(1) {
+        margin-left: 0;
+      }
+      &.is-active {
+        background: var(--fl-col-orange10);
+      }
+    }
+  }
+  @include e(content) {
+    overflow: hidden;
+    position: relative;
+  }
+  @include m((top, bottom)) {
+    .#{$namespace}-tabs__item.is-top:nth-child(2),
+    .#{$namespace}-tabs__item.is-bottom:nth-child(2) {
+      padding-left: 0;
+    }
+    .#{$namespace}-tabs__item.is-top:last-child,
+    .#{$namespace}-tabs__item.is-bottom:last-child {
+      padding-right: 0;
+    }
+
+    &.#{$namespace}-tabs--border-card,
+    .#{$namespace}-tabs--left,
+    .#{$namespace}-tabs--right {
+      > .#{$namespace}-tabs__header {
+        .#{$namespace}-tabs__item:nth-child(2) {
+          padding-left: 20px;
+        }
+        .#{$namespace}-tabs__item:last-child {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+  @include m(bottom) {
+    .#{$namespace}-tabs__header.is-bottom {
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+    &.#{$namespace}-tabs--border-card {
+      .#{$namespace}-tabs__header.is-bottom {
+        border-bottom: 0;
+      }
+      .#{$namespace}-tabs__nav-wrap.is-bottom {
+        margin-top: -1px;
+        margin-bottom: 0;
+      }
+      .#{$namespace}-tabs__item.is-bottom:not(.is-active) {
+        border: 1px solid transparent;
+      }
+      .#{$namespace}-tabs__item.is-bottom {
+        margin: 0 -1px -1px -1px;
+      }
+    }
+  }
+  @include m((left, right)) {
+    overflow: hidden;
+    &.#{$namespace}-tabs--card {
+      .#{$namespace}-tabs__item {
+        text-align: left;
+        margin-left: 0;
+        margin-bottom: 8px;
+      }
+    }
+    
+    
+    .#{$namespace}-tabs__header.is-left,
+    .#{$namespace}-tabs__header.is-right,
+    .#{$namespace}-tabs__nav-wrap.is-left,
+    .#{$namespace}-tabs__nav-wrap.is-right,
+    .#{$namespace}-tabs__nav-scroll {
+      height: 100%;
+    }
+
+    .#{$namespace}-tabs__active-bar.is-left,
+    .#{$namespace}-tabs__active-bar.is-right {
+      top: 0;
+      bottom: auto;
+      width: 4px;
+      height: auto;
+    }
+
+    .#{$namespace}-tabs__nav-wrap.is-left,
+    .#{$namespace}-tabs__nav-wrap.is-right {
+      margin-bottom: 0;
+
+      > .#{$namespace}-tabs__nav-prev,
+      > .#{$namespace}-tabs__nav-next {
+        width: 100%;
+        height: 15px;
+        text-align: center;
+        cursor: pointer;
+        
+        line-height: normal;
+        .anticon {
+          transform: rotateZ(90deg) !important;
+        }
+      }
+      > .#{$namespace}-tabs__nav-prev {
+        left: auto;
+        top: 20px;
+      }
+      > .#{$namespace}-tabs__nav-next {
+        top: auto;
+        left: auto;
+        bottom: 20px !important;
+      }
+
+      &.is-scrollable {
+        padding: 30px 0;
+      }
+
+      &::after {
+        height: 100%;
+        width: 4px;
+        bottom: auto;
+        top: 0;
+      }
+    }
+
+    .#{$namespace}-tabs__nav.is-left,
+    .#{$namespace}-tabs__nav.is-right {
+      float: none;
+    }
+    .#{$namespace}-tabs__item.is-left,
+    .#{$namespace}-tabs__item.is-right {
+      display: block;
+    }
+  }
+  @include m(left) {
+    
+    &.#{$namespace}-tabs--card {
+      .#{$namespace}-tabs__item {
+        text-align: left;
+        margin-left: 0;
+        padding-left: 12px;
+      }
+      .#{$namespace}-tabs__item.is-left {
+        padding-right: 0;
+      }
+    }
+    .#{$namespace}-tabs__header.is-left {
+      float: left;
+      margin-bottom: 0;
+    }
+    .#{$namespace}-tabs__nav-wrap.is-left {
+      margin-right: -1px;
+      &::after {
+        left: auto;
+        right: 0;
+      }
+    }
+    .#{$namespace}-tabs__active-bar.is-left {
+      right: 0;
+      left: auto;
+    }
+    .#{$namespace}-tabs__item.is-left {
+      text-align: left;
+      padding-right: 10px;
+    }
+  }
+  @include m(right) {
+    &.#{$namespace}-tabs--card {
+      .#{$namespace}-tabs__item.is-right {
+        text-align: right;
+        margin-left: 0;
+        padding-right: 12px;
+      }
+    }
+    .#{$namespace}-tabs__header.is-right {
+      float: right;
+      margin-bottom: 0;
+    }
+
+    .#{$namespace}-tabs__nav-wrap.is-right {
+      margin-left: -1px;
+      &::after {
+        left: 0;
+        right: auto;
+      }
+    }
+
+    .#{$namespace}-tabs__item.is-right {
+      text-align: left;
+      padding-left: 10px;
+    }
+
+    .#{$namespace}-tabs__active-bar.is-right {
+      left: 0;
+    }
+  }
+}
+
+.slideInRight-transition,
+.slideInLeft-transition {
+  display: inline-block;
+}
+.slideInRight-enter {
+  animation: slideInRight-enter var(--l-transition-duration);
+}
+.slideInRight-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  animation: slideInRight-leave var(--l-transition-duration);
+}
+.slideInLeft-enter {
+  animation: slideInLeft-enter var(--l-transition-duration);
+}
+.slideInLeft-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  animation: slideInLeft-leave var(--l-transition-duration);
+}
+
+@keyframes slideInRight-enter {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight-leave {
+  0% {
+    transform-origin: 0 0;
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform-origin: 0 0;
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+@keyframes slideInLeft-enter {
+  0% {
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInLeft-leave {
+  0% {
+    transform-origin: 0 0;
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform-origin: 0 0;
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}

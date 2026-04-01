@@ -1,0 +1,20 @@
+@use 'sass:map';
+@use '../../../theme-chalk/mixins/mixins' as *;
+@use '../../../theme-chalk/mixins/utils' as *;
+@use '../../../theme-chalk/mixins/var' as *;
+
+@include b(date) {
+	.range-picker {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		border: 1px solid var(--fl-col-line);
+		border-radius: 4px;
+		&-focus {
+			border: 1px solid var(--fl-col-fblue5);
+		}
+		.date-picker {
+			padding-left: 2px;
+		}
+	}
+}

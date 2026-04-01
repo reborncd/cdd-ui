@@ -1,0 +1,42 @@
+@use 'sass:map';
+@use '../../../theme-chalk/mixins/mixins' as *;
+@use '../../../theme-chalk/mixins/utils' as *;
+@use '../../../theme-chalk/mixins/var' as *;
+
+@include b(ellipsis) {
+    white-space: pre-wrap;
+    word-break: break-word;
+    & [class*='#{$namespace}-ellipsis-span'] {
+        cursor: pointer;
+        color: var(--fl-col-fblue5);
+
+        &:active {
+            opacity: 0.7;
+        }
+        &.More,&.Less {
+            position: relative;
+            display: block;
+            padding-left: 16px;
+            &::before{
+                content: "";
+                width: 0;
+                height: 0;
+                position: absolute;
+                left: 0;
+                top: 7px;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+            }
+        }
+        &.More{
+            &::before{
+                border-top: 8px solid var(--fl-col-fblue5);
+            }
+        }
+        &.Less {
+            &::before{
+                border-bottom: 8px solid  var(--fl-col-fblue5);
+            }
+        }
+    }
+}

@@ -1,0 +1,588 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4234253 */
+  src: url('iconfont.woff2?t=1732602272347') format('woff2'),
+       url('iconfont.woff?t=1732602272347') format('woff'),
+       url('iconfont.ttf?t=1732602272347') format('truetype'),
+       url('iconfont.svg?t=1732602272347#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iflorens-shanchu:before {
+  content: "\e68d";
+}
+
+.iflorens-rongqi:before {
+  content: "\e68c";
+}
+
+.iflorens-editbianji:before {
+  content: "\e68b";
+}
+
+.iflorens-wenjianjia-weixuanzhong:before {
+  content: "\e68a";
+}
+
+.iflorens-shoucang-weixuanzhong:before {
+  content: "\e689";
+}
+
+.iflorens-language:before {
+  content: "\e9cf";
+}
+
+.iflorens-qiehuanyuyan:before {
+  content: "\e819";
+}
+
+.iflorens-baobiaodaohang-xiao:before {
+  content: "\e687";
+}
+
+.iflorens-baobiaodaohang-da:before {
+  content: "\e688";
+}
+
+.iflorens-a-Vector11:before {
+  content: "\e686";
+}
+
+.iflorens-a-Vector1:before {
+  content: "\e685";
+}
+
+.iflorens-biaoge:before {
+  content: "\e684";
+}
+
+.iflorens-drag-vertical:before {
+  content: "\e683";
+}
+
+.iflorens-kanban:before {
+  content: "\e679";
+}
+
+.iflorens-a-kanban3:before {
+  content: "\e67a";
+}
+
+.iflorens-wenjianjia-guanbi:before {
+  content: "\e67b";
+}
+
+.iflorens-wenjianjia-kong:before {
+  content: "\e67c";
+}
+
+.iflorens-kanban2:before {
+  content: "\e67e";
+}
+
+.iflorens-wenjianjia-dakai:before {
+  content: "\e67f";
+}
+
+.iflorens-zhuangtai10:before {
+  content: "\e680";
+}
+
+.iflorens-wenjianjia-man:before {
+  content: "\e681";
+}
+
+.iflorens-baobiao:before {
+  content: "\e682";
+}
+
+.iflorens-New-tab:before {
+  content: "\e677";
+}
+
+.iflorens-Order-big:before {
+  content: "\e678";
+}
+
+.iflorens-Menu:before {
+  content: "\e676";
+}
+
+.iflorens-a-rongqi323:before {
+  content: "\e675";
+}
+
+.iflorens-a-rongqi322:before {
+  content: "\e674";
+}
+
+.iflorens-Calendar:before {
+  content: "\e66e";
+}
+
+.iflorens-Audit:before {
+  content: "\e66f";
+}
+
+.iflorens-Bell:before {
+  content: "\e670";
+}
+
+.iflorens-Apartment:before {
+  content: "\e671";
+}
+
+.iflorens-ColumnHeightOutlined:before {
+  content: "\e672";
+}
+
+.iflorens-tag:before {
+  content: "\e673";
+}
+
+.iflorens-Down:before {
+  content: "\e66b";
+}
+
+.iflorens-Left:before {
+  content: "\e66c";
+}
+
+.iflorens-Crown1:before {
+  content: "\e66d";
+}
+
+.iflorens-check-circle:before {
+  content: "\e66a";
+}
+
+.iflorens-Setting:before {
+  content: "\e663";
+}
+
+.iflorens-Save:before {
+  content: "\e664";
+}
+
+.iflorens-Reload:before {
+  content: "\e665";
+}
+
+.iflorens-Filter:before {
+  content: "\e666";
+}
+
+.iflorens-File:before {
+  content: "\e667";
+}
+
+.iflorens-Export:before {
+  content: "\e668";
+}
+
+.iflorens-Crown:before {
+  content: "\e669";
+}
+
+.iflorens-UserAdd:before {
+  content: "\e662";
+}
+
+.iflorens-arrow-left-bold:before {
+  content: "\e661";
+}
+
+.iflorens-PaperClip:before {
+  content: "\e65a";
+}
+
+.iflorens-Home:before {
+  content: "\e65b";
+}
+
+.iflorens-Eye:before {
+  content: "\e65c";
+}
+
+.iflorens-CloudUpload:before {
+  content: "\e65d";
+}
+
+.iflorens-Edit:before {
+  content: "\e65e";
+}
+
+.iflorens-PlusSquare:before {
+  content: "\e65f";
+}
+
+.iflorens-MinusSquare:before {
+  content: "\e660";
+}
+
+.iflorens-MenuUnfold:before {
+  content: "\e655";
+}
+
+.iflorens-MenuFold:before {
+  content: "\e659";
+}
+
+.iflorens-zip:before {
+  content: "\e658";
+}
+
+.iflorens-excel:before {
+  content: "\e656";
+}
+
+.iflorens-email:before {
+  content: "\e657";
+}
+
+.iflorens-word:before {
+  content: "\e64f";
+}
+
+.iflorens-unknownfile:before {
+  content: "\e650";
+}
+
+.iflorens-ppt:before {
+  content: "\e651";
+}
+
+.iflorens-pdf:before {
+  content: "\e652";
+}
+
+.iflorens-otherfile:before {
+  content: "\e653";
+}
+
+.iflorens-image:before {
+  content: "\e654";
+}
+
+.iflorens-arrow-right-bold:before {
+  content: "\e64d";
+}
+
+.iflorens-arrow-down-bold:before {
+  content: "\e64e";
+}
+
+.iflorens-arrow-up-bold:before {
+  content: "\e64c";
+}
+
+.iflorens-star:before {
+  content: "\e647";
+}
+
+.iflorens-pushpin:before {
+  content: "\e648";
+}
+
+.iflorens-filter:before {
+  content: "\e649";
+}
+
+.iflorens-environment:before {
+  content: "\e64a";
+}
+
+.iflorens-crown:before {
+  content: "\e64b";
+}
+
+.iflorens-ZoomOut:before {
+  content: "\e646";
+}
+
+.iflorens-Form:before {
+  content: "\e642";
+}
+
+.iflorens-FileDone:before {
+  content: "\e643";
+}
+
+.iflorens-ExpandAlt:before {
+  content: "\e644";
+}
+
+.iflorens-ExclamationCircle:before {
+  content: "\e645";
+}
+
+.iflorens-Swap:before {
+  content: "\e637";
+}
+
+.iflorens-Star:before {
+  content: "\e638";
+}
+
+.iflorens-Search:before {
+  content: "\e639";
+}
+
+.iflorens-Redo:before {
+  content: "\e63a";
+}
+
+.iflorens-Pushpin:before {
+  content: "\e63b";
+}
+
+.iflorens-Plus:before {
+  content: "\e63c";
+}
+
+.iflorens-Link:before {
+  content: "\e63d";
+}
+
+.iflorens-InfoCircle:before {
+  content: "\e63e";
+}
+
+.iflorens-Global:before {
+  content: "\e63f";
+}
+
+.iflorens-FullscreenExit:before {
+  content: "\e640";
+}
+
+.iflorens-Fullscreen:before {
+  content: "\e641";
+}
+
+.iflorens-ZoomIn:before {
+  content: "\e630";
+}
+
+.iflorens-User:before {
+  content: "\e631";
+}
+
+.iflorens-Upload:before {
+  content: "\e632";
+}
+
+.iflorens-Undo:before {
+  content: "\e633";
+}
+
+.iflorens-Tag:before {
+  content: "\e634";
+}
+
+.iflorens-Sync:before {
+  content: "\e635";
+}
+
+.iflorens-SwapRight:before {
+  content: "\e636";
+}
+
+.iflorens-building:before {
+  content: "\e62f";
+}
+
+.iflorens-CheckCircle:before {
+  content: "\e62e";
+}
+
+.iflorens-Close:before {
+  content: "\e62d";
+}
+
+.iflorens-Environment:before {
+  content: "\e628";
+}
+
+.iflorens-Download:before {
+  content: "\e629";
+}
+
+.iflorens-DeleteOutlined:before {
+  content: "\e62a";
+}
+
+.iflorens-Copy:before {
+  content: "\e62b";
+}
+
+.iflorens-CloseCircle:before {
+  content: "\e62c";
+}
+
+.iflorens-ArrowRight:before {
+  content: "\e627";
+}
+
+.iflorens-ArrowsAlt:before {
+  content: "\e626";
+}
+
+.iflorens-ArrowLeft:before {
+  content: "\e625";
+}
+
+.iflorens-Shrink:before {
+  content: "\e624";
+}
+
+.iflorens-moon:before {
+  content: "\e622";
+}
+
+.iflorens-lujing344:before {
+  content: "\e623";
+}
+
+.iflorens-swap:before {
+  content: "\e604";
+}
+
+.iflorens-search:before {
+  content: "\e621";
+}
+
+.iflorens-a-Florens-big:before {
+  content: "\e603";
+}
+
+.iflorens-CRM-big:before {
+  content: "\e620";
+}
+
+.iflorens-a-Florens-Logo:before {
+  content: "\e61f";
+}
+
+.iflorens-bell:before {
+  content: "\e61e";
+}
+
+.iflorens-a-ReportCenter:before {
+  content: "\e619";
+}
+
+.iflorens-a-BasicData:before {
+  content: "\e618";
+}
+
+.iflorens-a-BasicData-big:before {
+  content: "\e616";
+}
+
+.iflorens-a-MovementManagemen-big:before {
+  content: "\e61d";
+}
+
+.iflorens-Contract1:before {
+  content: "\e61a";
+}
+
+.iflorens-a-MovementManagemen1:before {
+  content: "\e61b";
+}
+
+.iflorens-a-MyFavorites:before {
+  content: "\e61c";
+}
+
+.iflorens-Order:before {
+  content: "\e617";
+}
+
+.iflorens-a-SystemSetting:before {
+  content: "\e613";
+}
+
+.iflorens-CRM:before {
+  content: "\e614";
+}
+
+.iflorens-a-ApprovalCenter:before {
+  content: "\e615";
+}
+
+.iflorens-good:before {
+  content: "\e611";
+}
+
+.iflorens-Workplace:before {
+  content: "\e612";
+}
+
+.iflorens-a-xiaoxi4:before {
+  content: "\e610";
+}
+
+.iflorens-a-CustomerGeneralInformation:before {
+  content: "\e601";
+}
+
+.iflorens-a-UnitMovement2:before {
+  content: "\e605";
+}
+
+.iflorens-Booking:before {
+  content: "\e602";
+}
+
+.iflorens-Preclear:before {
+  content: "\e607";
+}
+
+.iflorens-a-UnitMovement:before {
+  content: "\e608";
+}
+
+.iflorens-a-InventoryInquiry:before {
+  content: "\e609";
+}
+
+.iflorens-Preclear2:before {
+  content: "\e60a";
+}
+
+.iflorens-a-LeaseContract2:before {
+  content: "\e60b";
+}
+
+.iflorens-a-CustomerGeneralInformation2:before {
+  content: "\e60c";
+}
+
+.iflorens-Booking2:before {
+  content: "\e60d";
+}
+
+.iflorens-a-LeaseContract:before {
+  content: "\e60e";
+}
+
+.iflorens-a-InventoryInquiry2:before {
+  content: "\e60f";
+}
+
+.iflorens-offset-arrow:before {
+  content: "\e606";
+}
+
+.iflorens-share:before {
+  content: "\e67d";
+}
+

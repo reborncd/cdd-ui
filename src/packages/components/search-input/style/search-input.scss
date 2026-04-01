@@ -1,0 +1,27 @@
+@use 'sass:map';
+@use '../../../theme-chalk/mixins/mixins' as *;
+@use '../../../theme-chalk/mixins/utils' as *;
+@use '../../../theme-chalk/mixins/var' as *;
+
+@include b(search-input) {
+  border: 1px solid transparent;
+  border-radius: 99px;
+  height: 32px;
+  line-height: 32px;
+  background: var(--fl-col-background-grey);
+  padding: 0 0 0 11px;
+  overflow: hidden;
+  :where(&).iflorens-ui-input-affix-wrapper:not(.iflorens-ui-input-affix-wrapper-disabled):hover {
+    box-shadow: 0 0 0 0 var(--fl-col-fblue5);
+    border: 1px solid transparent;
+    
+  }
+  :where(&).iflorens-ui-input-affix-wrapper:focus,
+  :where(&).iflorens-ui-input-affix-wrapper-focused {
+    box-shadow: 0 0 0 0 var(--fl-col-fblue5);
+    border: 1px solid var(--fl-col-fblue5) !important;
+  }
+  .iflorens-ui-input-suffix {
+    margin-right: 8px;
+  }
+}

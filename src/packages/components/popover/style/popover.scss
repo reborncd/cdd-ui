@@ -1,0 +1,34 @@
+@use 'sass:map';
+@use '../../../theme-chalk/mixins/mixins' as *;
+@use '../../../theme-chalk/mixins/utils' as *;
+@use '../../../theme-chalk/mixins/var' as *;
+
+
+@include b(popover) {
+    .iflorens-ui-popover-inner {
+        padding: 16px;
+    }
+    .popover-content-box {
+        display: flex;
+        flex-direction: column;
+        .content {
+            font-family: Nunito;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 22px;
+            letter-spacing: 0px;
+            font-variation-settings: "wght" 600;
+            /* 功能色/主文本 */
+            color: var(--fl-col-maintext);
+        }
+        .popover-content-bottom {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            .iflorens-ui-btn {
+                margin-left: 8px;
+            }
+        }
+    }
+}

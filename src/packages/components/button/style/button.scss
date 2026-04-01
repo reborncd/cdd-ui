@@ -1,0 +1,111 @@
+@use 'sass:map';
+@use '../../../theme-chalk/mixins/mixins' as *;
+@use '../../../theme-chalk/mixins/utils' as *;
+@use '../../../theme-chalk/mixins/var' as *;
+
+@include b(button) {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0px;
+  padding: 0 15px !important;
+  > .button-content {
+    order: 2;
+  }
+  > .fl-icon {
+    order: 1;
+    margin-right: 8px;
+  }
+  &.icon-right {
+    > .button-content {
+      order: 1;
+    }
+    > .fl-icon {
+      margin-left: 8px;
+      margin-right: 0px;
+      order: 2;
+    }
+  }
+  &.long-button {
+    text-align: center;
+    background: var(--fl-col-background);
+    border: 1px dashed var(--fl-col-line);
+    height: 32px;
+    border-radius: 99px;
+    color: var(--fl-col-fblue5);
+    &:hover {
+      border: 1px dashed var(--fl-col-fblue6);
+      color: var(--fl-col-fblue6);
+      .fl-icon {
+        color: var(--fl-col-fblue6) !important;
+      }
+    }
+    &:active {
+      border: 1px dashed var(--fl-col-fblue4);
+      color: var(--fl-col-fblue4);
+      .fl-icon {
+        color: var(--fl-col-fblue4) !important;
+      }
+    }
+  }
+  &.primary-button {
+    padding: 5px 16px;
+    border-radius: 4px;
+    background: var(--fl-col-fblue5);
+    height: auto;
+    color: #ffffff;
+    &:hover {
+      background: var(--fl-col-fblue6);
+      color: #fff;
+      .fl-icon {
+        color: var(--fl-col-fblue6) !important;
+      }
+    }
+    &:active {
+      background: var(--fl-col-fblue4);
+      color: #fff;
+      .fl-icon {
+        color: var(--fl-col-fblue4) !important;
+      }
+    }
+    @include when(disabled) {
+      &,
+      &:hover,
+      &:active {
+        background: var(--fl-col-neutral11);
+        border: 1px solid var(--fl-col-line);
+        color: var(--fl-col-disabledtext);
+        .fl-icon {
+          color: var(--fl-col-disabledtext) !important;
+        }
+      }
+    }
+  }
+  &.default-button {
+    padding: 5px 16px;
+    border-radius: 4px;
+    height: auto;
+    background: var(--fl-col-background);
+    color: var(--fl-col-fblue5);
+    border: 1px solid var(--fl-col-line);
+    &:hover {
+      background: var(--fl-col-background);
+      color: var(-fl-col-fblue5);
+      .fl-icon {
+        color: var(-fl-col-fblue5) !important;
+      }
+    }
+    &:active {
+      background: var(--fl-col-background);
+      color: var(-fl-col-fblue5);
+      .fl-icon {
+        color: var(-fl-col-fblue5) !important;
+      }
+    }
+  }
+}

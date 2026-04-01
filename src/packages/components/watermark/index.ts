@@ -1,0 +1,1 @@
+export { default as Watermark } from './src/watermark.vue'

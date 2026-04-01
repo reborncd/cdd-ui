@@ -1,0 +1,27 @@
+@use 'sass:map';
+@use 'config';
+@use 'function' as *;
+@use '../common/var' as *;
+
+$header-color: #3e54ad;
+$scroll-color: #a1a6b2;
+
+$transition-duration: () !default;
+$transition-duration: map.merge(
+  (
+    'default': 0.3s,
+    'fast': 0.2s
+  ),
+  $transition-duration
+);
+
+@mixin generate-color-variables($colors-map) {
+  @each $type, $colorList in $colors-map {
+    @for $i from 1 through length($colorList) {
+      $color: nth($colorList, $i);
+      $variableName: "--fl-col-#{$type}#{$i}";
+      
+      #{$variableName}: #{$color};
+    }
+  }
+}

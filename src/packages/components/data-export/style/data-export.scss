@@ -1,0 +1,68 @@
+@use 'sass:map';
+@use '../../../theme-chalk/mixins/mixins' as *;
+@use '../../../theme-chalk/mixins/utils' as *;
+@use '../../../theme-chalk/mixins/var' as *;
+
+@include b(data-export) {
+  display: flex;
+  height: auto;
+  overflow: hidden;
+  .iflorens-ui-button,
+  :where(.css-dev-only-do-not-override-19iuou).iflorens-ui-btn-link,
+  .iflorens-ui-btn-link {
+    border: solid 1px transparent !important;
+    color: rgba(62, 86, 167, 1) !important;
+    border-radius: 4px !important;
+    background: var(--fl-col-background-grey) !important;
+    height: auto !important;
+    width: auto !important;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 9px !important;
+    &:hover {
+      background: var(--fl-col-neutral9) !important;
+    }
+  }
+}
+
+.g-notification-tips {
+  width: 300px !important;
+  border-radius: 8px !important;
+  margin-right: -12px;
+  padding: 12px !important;
+  .iflorens-ui-notification-notice-icon, .ant-notification-notice-icon {
+    top: 15px;
+  }
+  .iflorens-ui-notification-notice-content .iflorens-ui-notification-notice-message, .ant-notification-notice-message {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 22px;
+    margin-left: 36px;
+    font-weight: 700;
+    font-variation-settings: 'wght' 700;
+    color: var(--fl-col-maintext);
+  }
+  .iflorens-ui-notification-notice-description, .ant-notification-notice-description {
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 22px;
+    margin-left: 30px;
+    font-weight: normal;
+    font-variation-settings: 'wght' 600;
+    color: #3d3d3d;
+  }
+
+  .loading-3-quarters-spin {
+    animation: spin 1.2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

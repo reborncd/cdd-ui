@@ -1,0 +1,34 @@
+/*
+ * @Author: v_yangyaru
+ * @Date: 2024-10-08 09:14:33
+ * @LastEditors: v_yangyaru
+ * @LastEditTime: 2024-10-08 15:38:32
+ * @FilePath: /iflorens-web-ui/src/packages/components/upload/style/upload.scss
+ * @Description: 
+ */
+@use '../../../theme-chalk/mixins/mixins.scss' as *;
+
+@include b(upload) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: pointer;
+  .upload-btn {
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: rgba(245, 246, 249, 1);
+    color: rgba(62, 84, 173, 1);
+    font-size: 14px;
+    font-weight: 500;
+    border: 0px;
+    border-radius: 2px;
+    width: 81px;
+    height: 24px;
+    line-height: 24px;
+    flex-shrink: 1;
+    font-variation-settings: 'wght' 600;
+    .upload-icon {
+      margin-right: 4px;
+    }
+  }
+}

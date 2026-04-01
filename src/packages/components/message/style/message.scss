@@ -1,0 +1,119 @@
+// message.scss
+/* 覆盖 Ant Design 默认样式，实现 Element UI 风格 */
+$--color-success: #67C23A !default;
+$--color-warning: #E6A23C !default;
+$--color-danger: #F56C6C !default;
+$--color-info: #909399 !default;
+.ant-message-custom-content{
+  display: flex !important;
+}
+.ant-message {
+  z-index: 999999 !important;
+  display:flex; 
+  left: 50% !important;
+  top: 40px !important;
+  transform: translate(-50%, -50%) !important; // 双重居中
+  div{
+    margin: 0 auto;
+  }
+  /* Element 风格动画 */
+  .custom-message {
+    box-sizing: border-box;
+    box-shadow: unset !important;
+    animation: msgbox-fade-in .3s;
+    min-width: 380px;
+    padding: 15px 20px !important;
+    background: #fff;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #606266;
+
+    /* 关闭按钮样式 */
+    .ant-message-close {
+      position: absolute !important;
+      right: 20px !important;
+      top: 50% !important;
+      transform: translateY(-50%);
+      color: #000;
+      background: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: color .2s;
+
+      &:hover {
+        color: $--color-info;
+      }
+    }
+
+    /* 消息类型配色系统 */
+    &[class*="closable-message"] {
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        border-radius: 8px 0 0 8px;
+      }
+
+      /* 成功类型 */
+      &.closable-message-success {
+        border: 1px solid #e1f3d8;
+        background: #f0f9eb;
+        &::before { background: $--color-success; }
+        .ant-message-close { color: $--color-success; }
+      }
+
+      /* 错误类型 */
+      &.closable-message-error {
+        border: 1px solid #fde2e2;
+        background: #fef0f0;
+        &::before { background: $--color-danger; }
+        .ant-message-close { color: $--color-danger; }
+      }
+
+      /* 警告类型 */
+      &.closable-message-warning {
+        border: 1px solid #faecd8;
+        background: #fdf6ec;
+        &::before { background: $--color-warning; }
+        .ant-message-close { color: $--color-warning; }
+      }
+
+      /* 信息类型 */
+      &.closable-message-info {
+        border: 1px solid #ebeef5;
+        background: #f4f4f5;
+        &::before { background: $--color-info; }
+        .ant-message-close { color: $--color-info; }
+      }
+    }
+  }
+}
+
+/* Element 风格动画 */
+@keyframes msgbox-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes msgbox-fade-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}

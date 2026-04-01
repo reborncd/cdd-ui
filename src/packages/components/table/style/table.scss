@@ -1,0 +1,30 @@
+@use '../../../theme-chalk/mixins/mixins' as *;
+@use '../../../theme-chalk/common/var' as *;
+
+@include b(table) {
+    .vxe-table .vxe-cell--sort {
+        position: relative;
+        top: -3px;
+        i {
+            height: 0.7em;
+        }
+    }
+    .fl-table-page {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .table-wrapper .vxe-table .vxe-sort--desc-btn.sort--active,
+    .table-wrapper .vxe-table .vxe-sort--asc-btn.sort--active {
+        color: #E26400 !important;
+    }
+    .vxe-cell--filter .vxe-filter--btn {
+        &:hover {
+            color: #E26400 !important;
+        }
+    }
+}
+
+.vxe-input--prefix, .vxe-input--suffix {
+    background-color: transparent !important;
+}
