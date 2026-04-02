@@ -4,7 +4,7 @@
 
 ```vue demo
 <template>
-    <fl-anchor :anchorList="anchorList"></fl-anchor>
+    <cdd-anchor :anchorList="anchorList"></cdd-anchor>
 </template>
 <script lang="ts">
 import { ref, h } from "vue"

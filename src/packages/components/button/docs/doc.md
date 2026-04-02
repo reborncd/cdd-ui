@@ -4,9 +4,9 @@
 
 ```vue demo
 <template>
-    <fl-button size="small" className="long-button" block icon="iflorens-Plus" :iconStyle="iconStyle">
+    <cdd-button size="small" className="long-button" block icon="iflorens-Plus" :iconStyle="iconStyle">
       Button
-    </fl-button>
+    </cdd-button>
 </template>
 
 <script lang="ts">
@@ -29,11 +29,11 @@ export default {
 ```vue demo
 <template>
     <div>
-        <fl-button size="small" className="primary-button" type="primary">Button</fl-button>
+        <cdd-button size="small" className="primary-button" type="primary">Button</cdd-button>
         <br /><br />
-        <fl-button size="small" className="primary-button" type="primary" disabled>Button</fl-button>
+        <cdd-button size="small" className="primary-button" type="primary" disabled>Button</cdd-button>
 
-        <fl-button size="small" className="primary-button" type="primary" icon="iflorens-Plus" disabled>Button</fl-button>
+        <cdd-button size="small" className="primary-button" type="primary" icon="iflorens-Plus" disabled>Button</cdd-button>
     </div>
 </template>
 
@@ -57,7 +57,7 @@ export default {
 ```vue demo
 <template>
     <div>
-        <fl-button size="small" className="default-button">Button</fl-button>
+        <cdd-button size="small" className="default-button">Button</cdd-button>
     </div>
 </template>
 

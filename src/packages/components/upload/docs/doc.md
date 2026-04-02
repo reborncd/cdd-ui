@@ -12,11 +12,11 @@
 
 ```vue demo
 <template>
-  <fl-upload :isShowImgPreview="false" :showUploadList="true" listType="text" :multiple="true" @error="onError" accept="image/png,.jpg" action="https://www.mocky.io/v2/5cc8019d300000980a055e76"></fl-upload>
+  <cdd-upload :isShowImgPreview="false" :showUploadList="true" listType="text" :multiple="true" @error="onError" accept="image/png,.jpg" action="https://www.mocky.io/v2/5cc8019d300000980a055e76"></cdd-upload>
   <br/>
-  <fl-upload :showUploadList="true" listType="picture"></fl-upload>
+  <cdd-upload :showUploadList="true" listType="picture"></cdd-upload>
   <br/>
-  <fl-upload :showUploadList="true" listType="picture-card" @preview="onPreview" :customRequest="onCustomRequest"></fl-upload>
+  <cdd-upload :showUploadList="true" listType="picture-card" @preview="onPreview" :customRequest="onCustomRequest"></cdd-upload>
 </template>
 
 <script lang="ts">

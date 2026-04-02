@@ -4,7 +4,7 @@
 
 ```vue demo
 <template>
-  <fl-select
+  <cdd-select
     v-model="value"
     selectStyle="width: 150px"
     :options="options"
@@ -42,7 +42,7 @@ const getPopupContainer = (node) => node.parentNode
 
 ```vue demo
 <template>
-  <fl-select
+  <cdd-select
     v-model="value"
     selectStyle="width: 420px"
     :options="options"
@@ -72,7 +72,7 @@ const fieldNames = {
 ### 自定义下拉列表-单选
 ```vue demo
 <template>
-  <fl-select v-model="value"  v-bind="selectProps"></fl-select>
+  <cdd-select v-model="value"  v-bind="selectProps"></cdd-select>
 </template>
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'
@@ -135,7 +135,7 @@ const selectProps = ref({
 ### 自定义下拉列表-多选
 ```vue demo
 <template>
-  <fl-select
+  <cdd-select
     v-model="multipleValue"
     selectStyle="width: 150px"
     :options="options"
@@ -151,7 +151,7 @@ const selectProps = ref({
     @pageChange="onPageChange"
     @search="onSearch"
   >
-  </fl-select>
+  </cdd-select>
 </template>
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'

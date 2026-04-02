@@ -1,7 +1,7 @@
 <template>
-  <div ref="root" :class="['fl-ellipsis']" :style="style">
+  <div ref="root" :class="['cdd-ellipsis']" :style="style">
     {{ expanded ? content : text }}
-    <span class="fl-ellipsis-span" :class="[expanded ? collapseText : expandText]" v-if="hasAction" @click="onClickAction">
+    <span class="cdd-ellipsis-span" :class="[expanded ? collapseText : expandText]" v-if="hasAction" @click="onClickAction">
       {{ expanded ? collapseText : expandText }}
     </span>
   </div>

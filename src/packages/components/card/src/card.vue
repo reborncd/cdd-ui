@@ -1,8 +1,8 @@
 <template>
   <div :class="{
     [ns.b()]: true,
-    'fl-b-card': type === 'b-card' ? true : false,
-    'fl-top-line': type === 'top-line' ? true : false
+    'cdd-b-card': type === 'b-card' ? true : false,
+    'cdd-top-line': type === 'top-line' ? true : false
   }">
     <div class="text-border">
       <span class="text-border-title" v-if="title">{{ title }}</span>

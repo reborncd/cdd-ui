@@ -3,7 +3,7 @@
 ## 基础用法
 ```vue demo
 <template>
-  <fl-auto-complete
+  <cdd-auto-complete
     v-model="modelValue"
     v-bind="parmas"
     @search="onSearch"
@@ -11,7 +11,7 @@
     @clear="onClear"
     @onBlur="onBlur"
   >
-  </fl-auto-complete>
+  </cdd-auto-complete>
 </template>
 <script lang="ts" setup>
 import { ref, watch } from 'vue'
@@ -96,14 +96,14 @@ const onClear = (e) => {
 ## 自定义选项
 ```vue demo
 <template>
-  <fl-auto-complete
+  <cdd-auto-complete
     v-model="modelValue"
     v-bind="parmas"
     @search="onSearch"
     @select="onSelect"
     @loadmore="loadMore"
   >
-  </fl-auto-complete>
+  </cdd-auto-complete>
 </template>
 <script lang="ts" setup>
 import { ref, reactive } from 'vue'

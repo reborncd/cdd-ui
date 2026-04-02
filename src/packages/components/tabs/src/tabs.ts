@@ -60,7 +60,7 @@ const getPaneInstanceFromSlot = (vnode: VNode, paneInstanceList: ComponentIntern
   Array.from(children).forEach((node) => {
     let type = node.type;
     type = (type as Component).name || type;
-    if (type === 'FlTabPane' && node.component) {
+    if (type === 'CddTabPane' && node.component) {
       paneInstanceList.push(node.component);
     } else if (type === Fragment || type === 'template') {
       getPaneInstanceFromSlot(node, paneInstanceList);
@@ -86,7 +86,7 @@ export default create({
     const updatePaneInstances = (isForceUpdate = false) => {
       if (slots.default) {
         const children = instance.subTree.children as ArrayLike<VNode>;
-        const content = Array.from(children).find(({ props }) => props?.class === 'fl-tabs__content');
+        const content = Array.from(children).find(({ props }) => props?.class === 'cdd-tabs__content');
         if (!content) return;
 
         const paneInstanceList: TabsPaneContext[] = getPaneInstanceFromSlot(content).map(
@@ -195,7 +195,7 @@ export default create({
         'div',
         {
           class: [
-            'fl-tabs__header',
+            'cdd-tabs__header',
             `is-${props.tabPosition}`,
             `${props.isShowHeaderBoder ? 'is-show-header-boder' : 'is-hide-header-boder'}`
           ]
@@ -216,16 +216,16 @@ export default create({
         ]
       );
 
-      const panels = h('div', { class: 'fl-tabs__content' }, [renderSlot(slots, 'default')]);
+      const panels = h('div', { class: 'cdd-tabs__content' }, [renderSlot(slots, 'default')]);
 
       return h(
         'div',
         {
           class: {
-            'fl-tabs': true,
-            'fl-tabs--card': props.type === 'card',
-            [`fl-tabs--${props.tabPosition}`]: true,
-            'fl-tabs--border-card': props.type === 'border-card'
+            'cdd-tabs': true,
+            'cdd-tabs--card': props.type === 'card',
+            [`cdd-tabs--${props.tabPosition}`]: true,
+            'cdd-tabs--border-card': props.type === 'border-card'
           }
         },
         props.tabPosition !== 'bottom' ? [header, panels] : [panels, header]

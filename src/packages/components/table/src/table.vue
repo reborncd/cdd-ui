@@ -27,7 +27,7 @@
         <slot :name="item" v-bind="props"></slot>
       </template>
       <template #pager v-if="showPager">
-        <div class="fl-table-page" :class="{ 'fl-table-page-deep-blue': pagerConfig.mode === 'darkBlue' }">
+        <div class="cdd-table-page" :class="{ 'cdd-table-page-deep-blue': pagerConfig.mode === 'darkBlue' }">
           <div>
             <slot name="table-page-left" v-if="$slots['table-page-left']"></slot>
           </div>
@@ -41,7 +41,7 @@
         </div>
       </template>
       <template #empty>
-        <fl-empty :description="description" type="noItem" :image="emptyImage"></fl-empty>
+        <cdd-empty :description="description" type="noItem" :image="emptyImage"></cdd-empty>
       </template>
     </vxe-grid>
   </div>
@@ -187,7 +187,7 @@ export default create({
   :deep(.vxe-table--header) {
     --header-color: v-bind(headerTextColor);
     margin-top: 0;
-    background: var(--fl-col-background);
+    background: var(--cdd-col-background);
     .vxe-cell--title {
       font-weight: 700;
       color: var(--header-color);
@@ -195,11 +195,11 @@ export default create({
   }
 
   :deep(.vxe-table--body) {
-    color: var(--fl-col-maintext);
+    color: var(--cdd-col-maintext);
   }
 
   :deep(.vxe-table--body tbody tr.row--stripe) {
-    background-color: var(--fl-col-background-grey) !important;
+    background-color: var(--cdd-col-background-grey) !important;
   }
 
   :deep(.vxe-table--body tbody tr.row--hover) {
@@ -208,7 +208,7 @@ export default create({
   :deep() {
     .vxe-table .vxe-sort--desc-btn,
     .vxe-table .vxe-sort--asc-btn {
-      color: var(--fl-col-secondarytext-new);
+      color: var(--cdd-col-secondarytext-new);
     }
   }
 
@@ -225,11 +225,11 @@ export default create({
   }
 
   :deep(.vxe-table .vxe-sort--asc-btn.sort--active) {
-    color: var(--fl-col-fblue5);
+    color: var(--cdd-col-fblue5);
   }
 
   :deep(.vxe-table .vxe-sort--desc-btn.sort--active) {
-    color: var(--fl-col-fblue5);
+    color: var(--cdd-col-fblue5);
   }
 
   :deep(.vxe-pager) {
@@ -239,12 +239,12 @@ export default create({
     font-weight: 500;
     font-variation-settings: 'wght' 600;
     /* 功能色/主文本 */
-    color: var(--fl-col-maintext);
+    color: var(--cdd-col-maintext);
 
     .vxe-pager--total {
       &::after {
         content: attr(data-content);
-        color: var(--fl-col-fblue5);
+        color: var(--cdd-col-fblue5);
         font-weight: bold;
       }
     }
@@ -253,18 +253,18 @@ export default create({
     .vxe-pager--next-btn {
       &:not(.is--disabled) {
         &.is--active {
-          background-color: var(--fl-col-background-grey);
-          color: var(--fl-col-fblue5);
+          background-color: var(--cdd-col-background-grey);
+          color: var(--cdd-col-fblue5);
           box-shadow: none;
         }
 
         &:hover {
-          color: var(--fl-col-fblue5);
+          color: var(--cdd-col-fblue5);
         }
 
         &:focus {
-          background-color: var(--fl-col-background-grey);
-          color: var(--fl-col-fblue5);
+          background-color: var(--cdd-col-background-grey);
+          color: var(--cdd-col-fblue5);
           box-shadow: none;
         }
       }
@@ -272,19 +272,19 @@ export default create({
   }
 
   :deep(.vxe-select-option.is--selected) {
-    color: var(--fl-col-fblue5);
+    color: var(--cdd-col-fblue5);
   }
 
   :deep(.vxe-select-option.is--hover) {
-    background-color: var(--fl-col-background-grey);
+    background-color: var(--cdd-col-background-grey);
   }
 
   :deep(.vxe-select.is--active:not(.is--filter) > .vxe-input) {
-    border-color: var(--fl-col-fblue5) !important;
+    border-color: var(--cdd-col-fblue5) !important;
   }
 
   :deep(.vxe-input.is--active) {
-    border-color: var(--fl-col-fblue5) !important;
+    border-color: var(--cdd-col-fblue5) !important;
   }
 
   :deep(.vxe-select) {
@@ -295,7 +295,7 @@ export default create({
     font-family: Nunito;
     font-size: 14px;
     font-variation-settings: 'wght' 600;
-    color: var(--fl-col-maintext);
+    color: var(--cdd-col-maintext);
   }
 }
 
@@ -318,7 +318,7 @@ export default create({
 
   tr {
     // color: rgba(0, 0, 0, 0.85) !important;
-    background: var(--fl-col-background) !important;
+    background: var(--cdd-col-background) !important;
   }
 
   // .vxe-table--header {
@@ -329,7 +329,7 @@ export default create({
 
   tr.vxe-header--row {
     th {
-      background: var(--fl-col-background-grey) !important;
+      background: var(--cdd-col-background-grey) !important;
       border: 0 !important;
       font-size: 12px !important;
 
@@ -383,7 +383,7 @@ export default create({
 :deep(.wavy-line) {
   .vxe-table--render-default.border--default .vxe-body--column {
     background-image: none;
-    border-bottom: 1px dashed var(--fl-col-line) !important;
+    border-bottom: 1px dashed var(--cdd-col-line) !important;
   }
 
   .vxe-table--render-default .vxe-body--x-space {
@@ -396,7 +396,7 @@ export default create({
 
   td {
     border-top: none;
-    border-bottom: 1px dashed var(--fl-col-line) !important;
+    border-bottom: 1px dashed var(--cdd-col-line) !important;
 
     &:last-child {
       border-bottom: none;
@@ -506,7 +506,7 @@ export default create({
   }
 }
 
-.table-fl-empty {
+.table-cdd-empty {
   border: none;
   display: flex;
   justify-content: center;
@@ -519,35 +519,35 @@ export default create({
     }
   }
   .vxe-table--render-default .vxe-cell--checkbox.is--indeterminate .vxe-checkbox--icon {
-    color: var(--fl-col-fblue5);
+    color: var(--cdd-col-fblue5);
     &::before {
-      color: var(--fl-col-fblue5);
+      color: var(--cdd-col-fblue5);
     }
   }
   .vxe-checkbox--icon .vxe-table-icon-checkbox-indeterminate-fill {
     &:hover {
-      color: var(--fl-col-fblue5);
+      color: var(--cdd-col-fblue5);
     }
   }
   .vxe-table--render-default .vxe-cell--checkbox.is--checked .vxe-checkbox--icon {
-    color: var(--fl-col-fblue5);
+    color: var(--cdd-col-fblue5);
     &:hover {
-      color: var(--fl-col-fblue5);
+      color: var(--cdd-col-fblue5);
     }
   }
   .vxe-table--render-default .vxe-cell--checkbox .vxe-checkbox--icon {
     &:hover {
-      color: var(--fl-col-fblue5);
+      color: var(--cdd-col-fblue5);
     }
   }
   .vxe-checkbox--label {
-    color: var(--fl-col-neutral1);
+    color: var(--cdd-col-neutral1);
   }
 }
 :deep(.solid-border) {
   .vxe-body--row:last-child td.vxe-body--column {
     background-image: none;
-    border-bottom: 1px solid var(--fl-col-line) !important;
+    border-bottom: 1px solid var(--cdd-col-line) !important;
   }
 }
 
@@ -661,26 +661,26 @@ export default create({
 :deep(.vxe-header--column) {
   .vxe-resizable {
     height: 22px;
-    background: var(--fl-col-neutral9);
+    background: var(--cdd-col-neutral9);
     top: 50%;
     transform: translate(0, -50%);
     width: 1px;
     right: 0;
     &:hover {
       width: 5px;
-      background: var(--fl-col-fblue5);
+      background: var(--cdd-col-fblue5);
     }
   }
   .is--line {
     display: block;
   }
 }
-.fl-table-page-deep-blue {
+.cdd-table-page-deep-blue {
   :deep(.vxe-pager) {
     .vxe-select
     .vxe-select--panel-wrapper {
       padding:2px;
-      background-color: var(--fl-col-fblue-dark)!important;
+      background-color: var(--cdd-col-fblue-dark)!important;
       color:#999EB6!important;
       .is--hover {
         // background-color: #E8F0FF !important;
@@ -695,7 +695,7 @@ export default create({
     }
   }
   :deep(.vxe-select-option) {
-    background-color: var(--fl-col-fblue-dark) !important;
+    background-color: var(--cdd-col-fblue-dark) !important;
     color: #999EB6 !important;
   }
   :deep(.vxe-select--panel-wrapper){

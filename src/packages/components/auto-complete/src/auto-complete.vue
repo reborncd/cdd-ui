@@ -48,7 +48,7 @@
               </div>
             </div>
           </div>
-          <fl-empty v-if="!item.options.length" description="No Data" />
+          <cdd-empty v-if="!item.options.length" description="No Data" />
         </template>
         <template v-else>
           <div class="header-title options-item" v-if="tableColumns.length">
@@ -238,7 +238,7 @@ export default create({
   align-items: center;
   flex-direction: column;
   font-size: 12px;
-  border-bottom: 1px solid var(--fl-col-line);
+  border-bottom: 1px solid var(--cdd-col-line);
   .header-page {
     display: flex;
     justify-content: space-between;
@@ -252,7 +252,7 @@ export default create({
     border-radius: 4px;
     span {
       font-weight: bold;
-      color: var(--fl-col-secondarytext-new);
+      color: var(--cdd-col-secondarytext-new);
       margin: 0;
     }
   }
@@ -333,7 +333,7 @@ export default create({
     width: 100%;
     height: 100%;
     animation: rotate 1s linear infinite;
-	  color: var(--fl-col-blue5);
+	  color: var(--cdd-col-blue5);
   }
 }
 .custom-autocomplete-popup {
@@ -374,7 +374,7 @@ export default create({
       padding: 0 4px;
       line-height: 32px;
       border-radius: unset;
-      border-bottom: 1px dashed var(--fl-col-line);
+      border-bottom: 1px dashed var(--cdd-col-line);
     }
   }
   .iflorens-ui-select-item.iflorens-ui-select-item-group {
@@ -392,7 +392,7 @@ export default create({
     //   position: sticky;
     //   top: 0;
     //   left: 0;
-    //   background: var(--fl-col-background-grey);;
+    //   background: var(--cdd-col-background-grey);;
     //   z-index: 1;
     //   width: 100%;
     //   .header-title {
@@ -425,20 +425,20 @@ export default create({
 }
   .total{
     padding: 0 10px;
-    background: var(--fl-col-fblue-dark);
+    background: var(--cdd-col-fblue-dark);
     color:#fff!important;
   }
   .header{
     padding: 0;
-    background: var(--fl-col-fblue-dark);
+    background: var(--cdd-col-fblue-dark);
     border-radius: 0px;
   }
   .header-page  {
-    background: var(--fl-col-fblue-dark)!important;
+    background: var(--cdd-col-fblue-dark)!important;
     color:#fff!important;
   }
   .header-title {
-    background: var(--fl-col-fblue-dark)!important;
+    background: var(--cdd-col-fblue-dark)!important;
     border-radius: 0px!important;
   }
   .iflorens-ui-select-item{
@@ -446,7 +446,7 @@ export default create({
   }
   .iflorens-ui-select-item-option {
     margin: 0 4px !important;
-    background-color:var(--fl-col-fblue-dark)!important;
+    background-color:var(--cdd-col-fblue-dark)!important;
     color: #FFFFFF !important;
   }
   .iflorens-ui-select-item-option-content {

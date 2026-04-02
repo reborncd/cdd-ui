@@ -3,10 +3,10 @@
 ### 基本用法
 ```vue demo
 <template>
-  <fl-space>
-    <fl-button @click="showSuccess">警告提示</fl-button>
-    <fl-button @click="showError">错误提示</fl-button>
-  </fl-space>
+  <cdd-space>
+    <cdd-button @click="showSuccess">警告提示</cdd-button>
+    <cdd-button @click="showError">错误提示</cdd-button>
+  </cdd-space>
 </template>
 
 <script setup>

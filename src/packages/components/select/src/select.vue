@@ -6,7 +6,7 @@
       ref="selectRef"
       :style="selectStyle"
       :value="modelValue"
-      :popupClassName="`${popupClassName} ${customeRender?'fl-select-dropdown-container':'fl-select-dropdown-customeRender'} ${isLoading && showLoading?'isLoading':''} ${colorMode=='darkBlue'?'darkBlue':''}`"
+      :popupClassName="`${popupClassName} ${customeRender?'cdd-select-dropdown-container':'cdd-select-dropdown-customeRender'} ${isLoading && showLoading?'isLoading':''} ${colorMode=='darkBlue'?'darkBlue':''}`"
       :class="{'darkBlueClass':colorMode=='darkBlue'}"
       :defaultActiveFirstOption="computedDefaultActiveFirstOption"
       :optionLabelProp="optionLabelProp"
@@ -67,23 +67,23 @@
               Total {{ paginationConfig.total }} records. From {{ currentPageRecord }} to {{ currentPageTotalRecord }}
             </span>
             <span>
-              <fl-icon
+              <cdd-icon
                 type="iflorens-Left"
                 :class="{
-                  'fl-icon-disabled': paginationConfig.currentPage == 1,
-                  'fl-icon-active': paginationConfig.currentPage > 1,
-                  'fl-icon-white': colorMode=='darkBlue'
+                  'cdd-icon-disabled': paginationConfig.currentPage == 1,
+                  'cdd-icon-active': paginationConfig.currentPage > 1,
+                  'cdd-icon-white': colorMode=='darkBlue'
                 }"
                 @click="onPageChange('decrease')"
               />
-              <fl-icon
+              <cdd-icon
                 type="iflorens-Left"
                 class="iflorens-reverse"
                 :class="[
                   {
-                    'fl-icon-active': paginationConfig.currentPage < totalPageNo,
-                    'fl-icon-disabled': paginationConfig.currentPage == totalPageNo,
-                    'fl-icon-white': colorMode=='darkBlue'
+                    'cdd-icon-active': paginationConfig.currentPage < totalPageNo,
+                    'cdd-icon-disabled': paginationConfig.currentPage == totalPageNo,
+                    'cdd-icon-white': colorMode=='darkBlue'
                   }
                 ]"
                 @click="onPageChange('increase')"
@@ -117,7 +117,7 @@
         </div>
       </template>
       <template #notFoundContent>
-        <fl-empty description="No Data" />
+        <cdd-empty description="No Data" />
       </template>
       <template #tagRender="tagRenderItem" v-if="Boolean(slots['tagRender'])">
         <slot name="tagRender" v-bind="tagRenderItem" v-on="tagRenderItem"></slot>
@@ -451,23 +451,23 @@ export default create({
   // .rc-virtual-list-holder {
   //   max-height: 330px !important;
   // }
-  .fl-icon-disabled {
+  .cdd-icon-disabled {
     color: #ccc;
     cursor: not-allowed;
   }
 
-  .fl-icon-active {
-    color: var(--fl-col-fblue5);
+  .cdd-icon-active {
+    color: var(--cdd-col-fblue5);
   }
-  .fl-icon-white {
+  .cdd-icon-white {
     color: #fff !important;
   }
 
-  .fl-icon {
+  .cdd-icon {
     font-size: 12px !important;
   }
 
-  .fl-icon-loading {
+  .cdd-icon-loading {
     margin-left: 5px;
     font-size: 12px;
     color: #bbb;
@@ -494,7 +494,7 @@ export default create({
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    color: var(--fl-col-neutral1);
+    color: var(--cdd-col-neutral1);
     font-weight: 600;
     margin-right: 5px;
     flex-shrink: 0;
@@ -502,7 +502,7 @@ export default create({
   }
 
   .option-sub-title {
-    color: var(--fl-col-secondarytext-new);
+    color: var(--cdd-col-secondarytext-new);
   }
   .iflorens-ui-select-dropdown {
     min-width: 257px;
@@ -528,7 +528,7 @@ export default create({
     transform: rotate(360deg);
   }
 }
-.iflorens-ui-select-dropdown.fl-select-dropdown-container.isLoading {
+.iflorens-ui-select-dropdown.cdd-select-dropdown-container.isLoading {
   &::before {
     content: '';
     position: absolute;
@@ -553,16 +553,16 @@ export default create({
     width: 100%;
     height: 100%;
     animation: rotate 1s linear infinite;
-	  color: var(--fl-col-blue5);
+	  color: var(--cdd-col-blue5);
   }
 }
-.fl-select-dropdown-container {
+.cdd-select-dropdown-container {
   .customeRender-show-subTitle {
     display: none;
   }
   .total {
     font-size: 12px;
-    color: var(--fl-col-secondarytext-new);
+    color: var(--cdd-col-secondarytext-new);
     padding: 2px 4px 2px 6px;
     display: flex;
     justify-content: space-between;
@@ -576,13 +576,13 @@ export default create({
     align-items: center;
     justify-content: space-between;
     padding: 4px 6px;
-    background: var(--fl-col-background-grey);
+    background: var(--cdd-col-background-grey);
     line-height: 28px;
     .header-title {
       span {
         // flex: 1;
         font-weight: bold;
-        color: var(--fl-col-secondarytext-new);
+        color: var(--cdd-col-secondarytext-new);
       }
     }
   }
@@ -628,7 +628,7 @@ export default create({
     height: 24px;
     **/
     line-height: 20px;
-    border-bottom: 1px dashed var(--fl-col-line);
+    border-bottom: 1px dashed var(--cdd-col-line);
 
     &:hover {
       background: #f5f7fa;
@@ -637,12 +637,12 @@ export default create({
 
   .iflorens-ui-select-dropdown-menu-item {
     &:hover {
-      background: var(--fl-col-fblue10);
+      background: var(--cdd-col-fblue10);
     }
   }
 }
 
-.fl-select-dropdown-customeRender {
+.cdd-select-dropdown-customeRender {
   .rc-virtual-list-holder {
     max-height: 320px !important;
   }
@@ -657,7 +657,7 @@ export default create({
 
   .iflorens-ui-select-dropdown-menu-item-selected {
     font-weight: 600;
-    background-color: var(--fl-col-neutral12);
+    background-color: var(--cdd-col-neutral12);
   }
 }
 .darkBlueClass{
@@ -667,10 +667,10 @@ export default create({
   }
 }
 .darkBlue {
-  background-color: var(--fl-col-fblue-dark);
+  background-color: var(--cdd-col-fblue-dark);
   .total {
     padding: 0 8px;
-    background: var(--fl-col-fblue-dark);
+    background: var(--cdd-col-fblue-dark);
     color:#fff!important;
   }
   .multiple-total{
@@ -678,7 +678,7 @@ export default create({
   }
   .header {
     padding: 0 11px;
-    background: var(--fl-col-fblue-dark);
+    background: var(--cdd-col-fblue-dark);
     border-radius: 0px;
     .header-title {
       span {
@@ -686,14 +686,14 @@ export default create({
       }
     }
     .iflorens-ui-checkbox-inner::after{
-      background-color: var(--fl-col-fblue-dark) !important;
+      background-color: var(--cdd-col-fblue-dark) !important;
     }
   }
   .multiple-header{
     padding: 0 11px;
   }
   .iflorens-ui-select-item-option {
-    background-color: var(--fl-col-fblue-dark)!important;
+    background-color: var(--cdd-col-fblue-dark)!important;
     color:#FFFFFF !important;
     &:hover {
       background-color: #E8F0FF !important;
@@ -731,8 +731,8 @@ export default create({
     padding: 0 6px !important;
   }
   .iflorens-ui-checkbox-checked .iflorens-ui-checkbox-inner{
-    background-color: var(--fl-col-fblue-dark) !important;
-    border-color: var(--fl-col-fblue-dark) !important;
+    background-color: var(--cdd-col-fblue-dark) !important;
+    border-color: var(--cdd-col-fblue-dark) !important;
   }
   .iflorens-ui-empty-description{
     color: #fff !important;

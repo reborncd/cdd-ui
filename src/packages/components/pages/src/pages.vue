@@ -2,7 +2,7 @@
   <div :class="[ns.b(), isDragging ? 'no-select' : '',colorMode==='darkBlue'?'page-darkBlue':'']" ref="flPages">
     <div class="page-content">
       <div class="page-top">
-        <fl-collect
+        <cdd-collect
           :isShowCollectBtn="isShowCollectBtn"
           class="page-collect"
           @addSuccess="handleCallBack"
@@ -14,7 +14,7 @@
           :colorMode="colorMode"
         >
           <slot name="collect-default"></slot>
-        </fl-collect>
+        </cdd-collect>
         <div class="page-top-right">
           <slot name="table-top-left"></slot>
           <template v-if="colorMode === 'darkBlue'">
@@ -64,20 +64,20 @@
                             :disabled="headerDisabled.includes(item.title) || (internalDisabledColumns&&internalDisabledColumns.includes(item.title)) ? true : false"
                             >{{ item.title }}</a-checkbox
                           >
-                          <fl-icon
+                          <cdd-icon
                             v-if="!headerDraggableDisabledArr.includes(item.title)"
                             type="iflorens-drag-vertical"
                             :style="{
                               color: '#000',
                               fontSize: '14px'
                             }"
-                          ></fl-icon>
+                          ></cdd-icon>
                         </div>
                       </draggable>
                     </a-checkbox-group>
                   </div>
                 </template>
-                <fl-icon-button
+                <cdd-icon-button
                   class="page-button dark-blue-setting-btn"
                   icon="iflorens-Setting"
                   :iconStyle="{
@@ -86,7 +86,7 @@
                   }"
                   type="link"
                 >
-                </fl-icon-button>
+                </cdd-icon-button>
               </a-popover>
             </a-tooltip>
             <!-- 下载导出 -->
@@ -94,7 +94,7 @@
               <template #title>
                 <span>Export</span>
               </template>
-              <fl-data-export
+              <cdd-data-export
                 class="dark-blue-export-btn"
                 :request="fetch"
                 type="primary"
@@ -105,7 +105,7 @@
                 @btnClick="(e) => emit('btnClick', e)"
                 @errorAsyncExport="(e) => emit('errorAsyncExport', e)"
                 @errorTasksExports="() => emit('errorTasksExports')"
-                >Export</fl-data-export
+                >Export</cdd-data-export
               >
             </a-tooltip>
           </template>
@@ -115,7 +115,7 @@
               <template #title>
                 <span>Export</span>
               </template>
-              <fl-data-export
+              <cdd-data-export
                 :request="fetch"
                 type="primary"
                 :downFileName="downFileName"
@@ -125,7 +125,7 @@
                 @btnClick="(e) => emit('btnClick', e)"
                 @errorAsyncExport="(e) => emit('errorAsyncExport', e)"
                 @errorTasksExports="() => emit('errorTasksExports')"
-                >Export</fl-data-export
+                >Export</cdd-data-export
               >
             </a-tooltip>
             <!-- 列宽 -->
@@ -155,7 +155,7 @@
                     >
                   </div>
                 </template>
-                <fl-icon-button
+                <cdd-icon-button
                   class="page-button"
                   icon="iflorens-ColumnHeightOutlined"
                   :iconStyle="{
@@ -164,7 +164,7 @@
                   }"
                   type="link"
                 >
-                </fl-icon-button>
+                </cdd-icon-button>
               </a-popover>
             </a-tooltip>
             <!-- 是否显示搜索栏 -->
@@ -172,7 +172,7 @@
               <template #title>
                 <span>{{ isShowSearch ? 'Hide Filters' : 'Display Filters' }}</span>
               </template>
-              <fl-icon-button
+              <cdd-icon-button
                 class="page-button"
                 icon="iflorens-Filter"
                 :iconStyle="{
@@ -182,7 +182,7 @@
                 type="link"
                 @click="filterBtnClick"
               >
-              </fl-icon-button>
+              </cdd-icon-button>
             </a-tooltip>
             <a-tooltip placement="top" v-if="isShowSacFiltersBtn===true">
               <template #title>
@@ -229,20 +229,20 @@
                             :disabled="headerDisabled.includes(item.title) ? true : false"
                             >{{ item.title }}</a-checkbox
                           >
-                          <fl-icon
+                          <cdd-icon
                             v-if="!headerDraggableDisabledArr.includes(item.title)"
                             type="iflorens-drag-vertical"
                             :style="{
                               color: '#000',
                               fontSize: '14px'
                             }"
-                          ></fl-icon>
+                          ></cdd-icon>
                         </div>
                       </draggable>
                     </a-checkbox-group>
                   </div>
                 </template>
-                <fl-icon-button
+                <cdd-icon-button
                   class="page-button"
                   icon="iflorens-Setting"
                   :iconStyle="{
@@ -251,7 +251,7 @@
                   }"
                   type="link"
                 >
-                </fl-icon-button>
+                </cdd-icon-button>
               </a-popover>
             </a-tooltip>
           </template>
@@ -260,7 +260,7 @@
       </div>
       <div class="page-table" :class="{'page-table-dark-blue': colorMode === 'darkBlue'}">
         <slot name="page-table-customize" v-if="$slots['page-table-customize']"></slot>
-        <fl-table
+        <cdd-table
           ref="tableRef"
           v-bind="gridOptions"
           v-on="gridEvents"
@@ -273,12 +273,12 @@
           <template v-for="slotName in Object.keys($slots)" #[slotName]="props">
             <slot :name="slotName" v-bind="props"></slot>
           </template>
-        </fl-table>
+        </cdd-table>
       </div>
       <slot name="page-bottom"></slot>
     </div>
     <div class="page-search" v-show="isShowSearchForm && isShowSearch" :style="{ width: containerWidth + 'px' }">
-      <fl-search
+      <cdd-search
         :form="form"
         type="list"
         :fetch="fetch"
@@ -308,7 +308,7 @@
         <template #form-bottom>
           <slot name="form-bottom"></slot>
         </template>
-      </fl-search>
+      </cdd-search>
       <div class="drag-handle" ref="dragRef" @mousedown="startResize"></div>
     </div>
   </div>
@@ -584,7 +584,7 @@ export default create({
 </script>
 
 <style lang="scss" scoped>
-:deep(.fl-dropdown) {
+:deep(.cdd-dropdown) {
   width: auto;
 }
 .resize-handle {
@@ -594,7 +594,7 @@ export default create({
   bottom: 0;
   width: 1px;
   cursor: ew-resize;
-  background: var(--fl-col-neutral9);
+  background: var(--cdd-col-neutral9);
   &:hover {
     width: 5px;
     background: red;
@@ -609,20 +609,20 @@ export default create({
 }
 :deep(.vxe-table--render-default) {
   .vxe-table--resizable-bar:before {
-    background: var(--fl-col-fblue5);
+    background: var(--cdd-col-fblue5);
   }
 }
 :deep(.vxe-header--column) {
   .vxe-resizable {
     height: 22px;
-    background: var(--fl-col-neutral9);
+    background: var(--cdd-col-neutral9);
     top: 50%;
     transform: translate(0, -50%);
     width: 1px;
     right: 0;
     &:hover {
       width: 5px;
-      background: var(--fl-col-fblue5);
+      background: var(--cdd-col-fblue5);
     }
   }
   .is--line {
@@ -635,7 +635,7 @@ export default create({
       padding: 0 !important;
     }
   }
-  :deep(.fl-table) {
+  :deep(.cdd-table) {
     height: 100%;
   }
   :deep(.vxe-grid) {

@@ -1,5 +1,5 @@
 <template>
-  <div ref="bar$" :class="['fl-tabs__active-bar', `is-${rootTabs.props.tabPosition}`]" :style="barStyle"></div>
+  <div ref="bar$" :class="['cdd-tabs__active-bar', `is-${rootTabs.props.tabPosition}`]" :style="barStyle"></div>
 </template>
 
 <script lang="ts">

@@ -8,7 +8,7 @@
     word-break: break-word;
     & [class*='#{$namespace}-ellipsis-span'] {
         cursor: pointer;
-        color: var(--fl-col-fblue5);
+        color: var(--cdd-col-fblue5);
 
         &:active {
             opacity: 0.7;
@@ -30,12 +30,12 @@
         }
         &.More{
             &::before{
-                border-top: 8px solid var(--fl-col-fblue5);
+                border-top: 8px solid var(--cdd-col-fblue5);
             }
         }
         &.Less {
             &::before{
-                border-bottom: 8px solid  var(--fl-col-fblue5);
+                border-bottom: 8px solid  var(--cdd-col-fblue5);
             }
         }
     }

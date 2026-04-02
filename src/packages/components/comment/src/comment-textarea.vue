@@ -4,7 +4,7 @@
       <div class="commentary-textarea-head-tag">
         {{ selectTypeCommentary.label }}
       </div>
-      <fl-icon :type="modeType === 'shrink' ? 'iflorens-ExpandAlt' : 'iflorens-Shrink'" @click="shrinkClick"></fl-icon>
+      <cdd-icon :type="modeType === 'shrink' ? 'iflorens-ExpandAlt' : 'iflorens-Shrink'" @click="shrinkClick"></cdd-icon>
     </div>
     <div class="commentary-textarea-cnt">
       <a-textarea

@@ -69,7 +69,7 @@
         :popupClassName="'darkBlueDatePickerPopupClassName'"
         :picker="picker"
       />
-      <fl-icon type="iflorens-SwapRight" />
+      <cdd-icon type="iflorens-SwapRight" />
       <a-date-picker
         v-if="!colorMode"
         v-bind="attrs"
@@ -290,12 +290,12 @@ console.log('dateString', dateString, date, type);
     border: none;
     box-shadow: none;
   }
-  .fl-icon {
-    color: var(--fl-col-disabledtext);
+  .cdd-icon {
+    color: var(--cdd-col-disabledtext);
     transform: translateX(-50%);
     margin: -2px;
   }
-  .fl-date-picker-active-bar {
+  .cdd-date-picker-active-bar {
     left: 0;
     width: 90px;
     height: 2px;
@@ -304,7 +304,7 @@ console.log('dateString', dateString, date, type);
     transition: all 0.3s ease-out;
     pointer-events: none;
     border-radius: 2px 2px 0px 0px;
-    background: var(--fl-col-fblue5);
+    background: var(--cdd-col-fblue5);
   }
 }
 
@@ -345,21 +345,21 @@ console.log('dateString', dateString, date, type);
 .iflorens-ui-picker-dropdown {
   .iflorens-ui-picker-cell-in-view.iflorens-ui-picker-cell-today .iflorens-ui-picker-cell-inner {
     &::before {
-      border-color: var(--fl-col-fblue5);
+      border-color: var(--cdd-col-fblue5);
     }
   }
   .iflorens-ui-picker-today-btn {
-    color: var(--fl-col-fblue5);
+    color: var(--cdd-col-fblue5);
   }
 }
 .darkBlueDatePickerPopupClassName{
   :where(.iflorens-ui-picker-dropdown .iflorens-ui-picker-panel-container){
-    background: var(--fl-col-fblue-dark) !important;
+    background: var(--cdd-col-fblue-dark) !important;
     color: #fff !important;
   }
   &.iflorens-ui-picker-dropdown {
 		color: #fff;
-		background: var(--fl-col-fblue-dark);
+		background: var(--cdd-col-fblue-dark);
 	}
 	th {
 		color: #fff !important;
@@ -377,7 +377,7 @@ console.log('dateString', dateString, date, type);
 		}
 	}
 	.iflorens-ui-picker-panel-container {
-		background: var(--fl-col-fblue-dark);
+		background: var(--cdd-col-fblue-dark);
 		.iflorens-ui-picker-cell-in-view {
 			color: #fff;
 			opacity: 1 !important;

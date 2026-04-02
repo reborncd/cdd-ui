@@ -1,11 +1,11 @@
 <template>
   <div
-    :class="`fl-scrollbar-bar e-scrollbar-${direction}`"
+    :class="`cdd-scrollbar-bar e-scrollbar-${direction}`"
     @mousedown="handleBarMouseDown"
     :style="barStyle"
     ref="barRef"
   >
-    <div class="fl-scrollbar-thumb" ref="thumbRef" @mousedown="handleThumbMouseDown" :style="thumbStyleObj"></div>
+    <div class="cdd-scrollbar-thumb" ref="thumbRef" @mousedown="handleThumbMouseDown" :style="thumbStyleObj"></div>
   </div>
 </template>
 

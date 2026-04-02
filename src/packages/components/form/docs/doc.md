@@ -2,10 +2,10 @@
 ## 基础用法
 ```vue demo
 <template>
-  <fl-form
+  <cdd-form
     :form="form"
   >
-  </fl-form>
+  </cdd-form>
 </template>
 <script lang="ts" setup>
 import { reactive } from 'vue'

@@ -7,7 +7,7 @@
   <!-- :isShowSaveSearch="false" -->
   <!-- :tableHeightOffset="15" -->
 	<div style="background: rgba(245,246,249, 1.00);padding: 24px;border-radius: 10px;height: 600px">
-		<fl-pages
+		<cdd-pages
 			:fetch="fetch"
 			title="Lease Contract"
       :headerDisabled="['BU']"
@@ -49,7 +49,7 @@
         ssss
       </template> -->
       
-    </fl-pages>
+    </cdd-pages>
 	</div>
 </template>
 

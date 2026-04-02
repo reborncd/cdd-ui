@@ -1,15 +1,15 @@
 <template>
   <div :class="ns.b()">
     <div class="file-content">
-      <fl-icon :type="leftIconType"></fl-icon>
+      <cdd-icon :type="leftIconType"></cdd-icon>
       <span class="file-name">
-        <fl-tooltip-ellipsis :content="fileName" placement="topLeft" overlayClassName="resourceDesc" :tooltipTrigger="'hover'">
-        </fl-tooltip-ellipsis>
+        <cdd-tooltip-ellipsis :content="fileName" placement="topLeft" overlayClassName="resourceDesc" :tooltipTrigger="'hover'">
+        </cdd-tooltip-ellipsis>
       </span>
       <slot name="left"></slot>
-      <fl-icon v-if="isShowPreviewBtn" class="right-icon" type="iflorens-Eye" @click="eyeClick"></fl-icon>
-      <fl-icon v-if="isShowDownloadBtn" class="right-icon" type="iflorens-Download" @click="downloadFile"></fl-icon>
-      <fl-icon v-if="isShowDelBtn" class="right-icon" type="iflorens-DeleteOutlined" @click="delFile"></fl-icon>
+      <cdd-icon v-if="isShowPreviewBtn" class="right-icon" type="iflorens-Eye" @click="eyeClick"></cdd-icon>
+      <cdd-icon v-if="isShowDownloadBtn" class="right-icon" type="iflorens-Download" @click="downloadFile"></cdd-icon>
+      <cdd-icon v-if="isShowDelBtn" class="right-icon" type="iflorens-DeleteOutlined" @click="delFile"></cdd-icon>
       <slot name="right"></slot>
     </div>
     <a-progress v-if="isUpdate" :percent="percent" :show-info="false" :strokeWidth="strokeWidth" />

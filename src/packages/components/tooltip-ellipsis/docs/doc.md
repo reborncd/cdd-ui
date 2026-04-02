@@ -5,32 +5,32 @@
 <template>
     <div style="width: 200px;font-size: 14px;font-family:Nunito;font-variation-settings: 'wght' 600;">
       <div>
-        <fl-tooltip-ellipsis :content="text" placement="topLeft" overlayClassName="resourceDesc" :tooltipTrigger="'hover'">
-        </fl-tooltip-ellipsis>
+        <cdd-tooltip-ellipsis :content="text" placement="topLeft" overlayClassName="resourceDesc" :tooltipTrigger="'hover'">
+        </cdd-tooltip-ellipsis>
       </div>
       <br />
       <br />
       <div>
-        <fl-tooltip-ellipsis :content="'没有省略号不展示'" placement="topLeft" overlayClassName="resourceDesc" :tooltipTrigger="'hover'">
-        </fl-tooltip-ellipsis>
+        <cdd-tooltip-ellipsis :content="'没有省略号不展示'" placement="topLeft" overlayClassName="resourceDesc" :tooltipTrigger="'hover'">
+        </cdd-tooltip-ellipsis>
       </div>
       <br />
       <br />
       <div>
-        <fl-tooltip-ellipsis :content="'没有省略号也要展示'" placement="topLeft" overlayClassName="resourceDesc" :tooltipTrigger="'hover'" :isShowEllipsisTooltip="false">
-        </fl-tooltip-ellipsis>
+        <cdd-tooltip-ellipsis :content="'没有省略号也要展示'" placement="topLeft" overlayClassName="resourceDesc" :tooltipTrigger="'hover'" :isShowEllipsisTooltip="false">
+        </cdd-tooltip-ellipsis>
       </div>
       <br />
       <br />
       <div>
-        <fl-tooltip-ellipsis :content="`有省略号我也要展示${text}`" placement="topLeft" overlayClassName="resourceDesc" :tooltipTrigger="'hover'" isShowEllipsisTooltip="false">
-        </fl-tooltip-ellipsis>
+        <cdd-tooltip-ellipsis :content="`有省略号我也要展示${text}`" placement="topLeft" overlayClassName="resourceDesc" :tooltipTrigger="'hover'" isShowEllipsisTooltip="false">
+        </cdd-tooltip-ellipsis>
       </div>
       <br />
       <br />
       <div>
-        <fl-tooltip-ellipsis :content="`test这是MKT文件夹测试L3jx7WgcQPcjHzaM8ZOKedL3jx7WgcQPcjHzaM8ZOKedL3jx7WgcQPcjHzaM8ZOKed'`" placement="topLeft" overlayClassName="resourceDesc" :tooltipTrigger="'hover'" isShowEllipsisTooltip="false">
-        </fl-tooltip-ellipsis>
+        <cdd-tooltip-ellipsis :content="`test这是MKT文件夹测试L3jx7WgcQPcjHzaM8ZOKedL3jx7WgcQPcjHzaM8ZOKedL3jx7WgcQPcjHzaM8ZOKed'`" placement="topLeft" overlayClassName="resourceDesc" :tooltipTrigger="'hover'" isShowEllipsisTooltip="false">
+        </cdd-tooltip-ellipsis>
       </div>
     </div>
     

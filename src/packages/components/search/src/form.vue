@@ -13,9 +13,9 @@
         <template #label v-if="type === 'card'">
           <span><span v-if="item.rules && !item.hideRequired" class="required-icon">*</span> {{ item.labelName }}</span>
           <a-tooltip :title="item.tip" v-if="item.tip">
-            <fl-icon style="margin-left: 8px; color: var(--fl-col-fblue5)" type="iflorens-InfoCircle" />
+            <cdd-icon style="margin-left: 8px; color: var(--cdd-col-fblue5)" type="iflorens-InfoCircle" />
           </a-tooltip>
-          <fl-dropdown
+          <cdd-dropdown
             v-if="type != 'card'"
             class="dropdown-card"
             v-model="item.operatorOptions.operator"
@@ -30,10 +30,10 @@
           <span>
             <span v-if="item.rules && !item.hideRequired" class="required-icon">*</span> {{ item.labelName }}
             <a-tooltip :title="item.tip" v-if="item.tip">
-              <fl-icon type="iflorens-InfoCircle" style="color: var(--fl-col-fblue5)" />
+              <cdd-icon type="iflorens-InfoCircle" style="color: var(--cdd-col-fblue5)" />
             </a-tooltip>
           </span>
-          <fl-dropdown
+          <cdd-dropdown
             v-if="type != 'card'"
             class="dropdown-card"
             v-model="item.operatorOptions.operator"
@@ -46,7 +46,7 @@
         </div>
         <a-row v-if="type == 'card'">
           <a-col>
-            <fl-dropdown
+            <cdd-dropdown
               v-model="item.operatorOptions.operator"
               :options="item.operatorOptions.options"
               :preventClick="item.preventClick"
@@ -58,7 +58,7 @@
           <a-col :span="12">
             <div v-if="['in', 'not in', '=', 'not ='].includes(item.operatorOptions.operator)">
               <template v-if="item.operatorOptions?.type === 'datePicker'">
-                <fl-date
+                <cdd-date
                   v-bind="item.propsData"
                   v-model="item.propsData.value"
                   :format="item.propsData.format"
@@ -66,7 +66,7 @@
                 />
               </template>
               <template v-else-if="item.operatorOptions?.type === 'input' && ['=', 'not ='].includes(item.operatorOptions.operator)">
-                <fl-auto-complete
+                <cdd-auto-complete
                   v-bind="item.propsData"
                   v-model="item.propsData.value"
                   ref="selectTableRefs"
@@ -84,7 +84,7 @@
                 />
               </template>
               <template v-else-if="item.operatorOptions?.type === 'inputTable' && ['='].includes(item.operatorOptions.operator)">
-                <fl-autoComplete-table
+                <cdd-autoComplete-table
                   v-bind="item.propsData"
                   v-if="item.propsData.request"
                   v-model="item.propsData.value"
@@ -107,7 +107,7 @@
                 />
               </template>
               <template v-else>
-                <fl-select-table
+                <cdd-select-table
                   v-bind="item.propsData"
                   v-if="item.propsData.request"
                   ref="selectTableRefs"
@@ -134,7 +134,7 @@
                   :getPopupContainer="item.propsData.getPopupContainer"
                   @blur="(val) => onBlur(val, index)"
                 />
-                <fl-select
+                <cdd-select
                   v-else
                   v-bind="item.propsData"
                   :mode="['=', 'not ='].includes(item.operatorOptions.operator) ? '' : 'multiple'"
@@ -159,7 +159,7 @@
               </template>
             </div>
             <div v-else-if="['begins with', 'contains', 'ends with'].includes(item.operatorOptions.operator)">
-              <fl-autoComplete-table
+              <cdd-autoComplete-table
                 v-bind="item.propsData"
                 v-if="item.propsData.request"
                 v-model="item.propsData.value"
@@ -180,7 +180,7 @@
                 :popupClassName="item.propsData.popupClassName || ''"
                 :getPopupContainer="item.propsData.getPopupContainer"
               />
-              <fl-auto-complete
+              <cdd-auto-complete
                 v-else
                 v-bind="item.propsData"
                 v-model="item.propsData.value"
@@ -198,7 +198,7 @@
                 :popupClassName="item.propsData.popupClassName || ''"
               />
             </div>
-            <fl-date
+            <cdd-date
               v-else-if="['from', 'to'].includes(item.operatorOptions.operator)"
               v-model="item.propsData.value"
               :format="item.propsData.format"
@@ -206,16 +206,16 @@
               @change="(date) => onDateChange(date, index)"
             />
             <template v-else-if="item.operatorOptions.operator === 'between'">
-              <fl-number-range
+              <cdd-number-range
                 v-if="item.operatorOptions.type && (item.operatorOptions.type === 'number-range'||item.operatorOptions.type === 'cockpick-input')"
                 v-model="item.propsData.value"
               />
-              <fl-date v-else dateType="rangePicker" v-bind="item.propsData" v-model="item.propsData.value" :format="item.propsData.format" :picker="item.propsData.picker" />
+              <cdd-date v-else dateType="rangePicker" v-bind="item.propsData" v-model="item.propsData.value" :format="item.propsData.format" :picker="item.propsData.picker" />
             </template>
             <template
               v-else-if="item.operatorOptions?.type === 'cockpick-input' && item.operatorOptions.operator !== 'between'"
             >
-              <fl-auto-complete
+              <cdd-auto-complete
                 v-bind="item.propsData"
                 v-model="item.propsData.value"
                 ref="selectTableRefs"
@@ -238,7 +238,7 @@
           <a-col :span="24">
             <div v-if="['in', 'not in', '=', 'not ='].includes(item.operatorOptions.operator)">
               <template v-if="item.operatorOptions?.type === 'datePicker'">
-                <fl-date
+                <cdd-date
                   v-bind="item.propsData"
                   v-model="item.propsData.value"
                   :format="item.propsData.format"
@@ -247,7 +247,7 @@
               </template>
 
               <template v-else-if="item.operatorOptions?.type === 'input' && ['=', 'not ='].includes(item.operatorOptions.operator)">
-                <fl-auto-complete
+                <cdd-auto-complete
                   v-bind="item.propsData"
                   v-model="item.propsData.value"
                   ref="selectTableRefs"
@@ -265,7 +265,7 @@
                 />
               </template>
               <template v-else-if="item.operatorOptions?.type === 'inputTable' && ['='].includes(item.operatorOptions.operator)">
-                <fl-autoComplete-table
+                <cdd-autoComplete-table
                   v-bind="item.propsData"
                   v-if="item.propsData.request"
                   v-model="item.propsData.value"
@@ -288,7 +288,7 @@
                 />
               </template>
               <template v-else>
-                <fl-select-table
+                <cdd-select-table
                   v-bind="item.propsData"
                   v-if="item.propsData.request"
                   ref="selectTableRefs"
@@ -315,7 +315,7 @@
                   :getPopupContainer="item.propsData.getPopupContainer"
                   @blur="(val) => onBlur(val, index)"
                 />
-                <fl-select
+                <cdd-select
                   v-else
                   v-bind="item.propsData"
                   :mode="['=', 'not ='].includes(item.operatorOptions.operator) ? '' : 'multiple'"
@@ -340,7 +340,7 @@
               </template>
             </div>
             <div v-else-if="['begins with', 'contains', 'ends with'].includes(item.operatorOptions.operator)">
-              <fl-autoComplete-table
+              <cdd-autoComplete-table
                 v-bind="item.propsData"
                 v-if="item.propsData.request"
                 v-model="item.propsData.value"
@@ -360,7 +360,7 @@
                 :props="item.propsData.selectProps"
                 :getPopupContainer="item.propsData.getPopupContainer"
               />
-              <fl-auto-complete
+              <cdd-auto-complete
                 v-else
                 v-bind="item.propsData"
                 v-model="item.propsData.value"
@@ -378,7 +378,7 @@
                 :props="item.propsData.selectProps"
               />
             </div>
-            <fl-date
+            <cdd-date
               v-else-if="['from', 'to'].includes(item.operatorOptions.operator)"
               :colorMode="form.colorMode"
               v-model="item.propsData.value"
@@ -389,7 +389,7 @@
             <template
               v-else-if="item.operatorOptions?.type === 'cockpick-input' && item.operatorOptions.operator !== 'between'"
             >
-              <fl-auto-complete
+              <cdd-auto-complete
                 v-bind="item.propsData"
                 v-model="item.propsData.value"
                 ref="selectTableRefs"
@@ -407,11 +407,11 @@
               />
             </template>
             <template v-else-if="item.operatorOptions.operator === 'between'">
-              <fl-number-range
+              <cdd-number-range
                 v-if="item.operatorOptions.type && (item.operatorOptions.type === 'number-range'||item.operatorOptions.type === 'cockpick-input')"
                 v-model="item.propsData.value"
               />
-              <fl-date v-else dateType="rangePicker" v-bind="item.propsData" v-model="item.propsData.value" :format="item.propsData.format" :colorMode="form.colorMode" />
+              <cdd-date v-else dateType="rangePicker" v-bind="item.propsData" v-model="item.propsData.value" :format="item.propsData.format" :colorMode="form.colorMode" />
             </template>
           </a-col>
         </div>
@@ -535,7 +535,7 @@ export default create({
 });
 </script>
 <style lang="scss" scoped>
-.fl-form {
+.cdd-form {
   padding: 0 16px;
 }
 .form-list {
@@ -592,19 +592,19 @@ export default create({
   span{
     color: #fff;
   }
-  :deep(.fl-dropdown){
+  :deep(.cdd-dropdown){
     background-color: transparent !important;
     color: #fff !important;
   }
   :deep(.iflorens-ui-dropdown-open .icon-box){
     background: #E8F0FF !important;
   }
-  :deep(.fl-icon){
+  :deep(.cdd-icon){
     color: #fff !important;
     border: none !important;
   }
 }
-:deep(.fl-dropdown) {
+:deep(.cdd-dropdown) {
   width: 120px;
   margin-right: 10px;
   margin-left: 4px;
@@ -612,7 +612,7 @@ export default create({
 :deep(.dropdown-card) {
   margin: 0;
 }
-:deep(.fl-icon) {
+:deep(.cdd-icon) {
   font-size: 14px !important;
   // margin-left: 8px;
 }

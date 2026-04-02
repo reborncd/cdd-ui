@@ -3,7 +3,7 @@
     <template #title>
       <div>{{ content }}</div>
     </template>
-    <fl-ellipsis
+    <cdd-ellipsis
       :content="content"
       :width="width"
       :rows="rows"
@@ -11,7 +11,7 @@
       @ellipsis="ellipsis"
       :style="ellipsisStyle"
       @click="textClick"
-    ></fl-ellipsis>
+    ></cdd-ellipsis>
   </a-tooltip>
 </template>
 

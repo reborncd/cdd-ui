@@ -7,9 +7,9 @@
     <div style="width: 1000px">
       <a-row>
         <a-col :span="12">
-          <fl-card title="Lease Contract">
-            <fl-card-item :columns="columns" :data="data"></fl-card-item>
-          </fl-card>
+          <cdd-card title="Lease Contract">
+            <cdd-card-item :columns="columns" :data="data"></cdd-card-item>
+          </cdd-card>
         </a-col>
         <a-col :span="12">
         </a-col>
@@ -60,9 +60,9 @@ export default {
     <div style="width: 1000px">
       <a-row>
         <a-col :span="12">
-          <fl-card>
-            <fl-card-item :columns="columns" :data="data" :gutter="24" :span="12" arrange="on-end"></fl-card-item>
-          </fl-card>
+          <cdd-card>
+            <cdd-card-item :columns="columns" :data="data" :gutter="24" :span="12" arrange="on-end"></cdd-card-item>
+          </cdd-card>
         </a-col>
         <a-col :span="12"></a-col>
       </a-row>
@@ -108,10 +108,10 @@ export default {
     <div style="width: 1000px">
       <a-row>
         <a-col :span="12">
-          <fl-card title="Lease Contract">
-            <fl-card-item :columns="columns" :data="data" itemStyle="padding: 18px 12px 8px 12px;"></fl-card-item>
-            <fl-card-item :columns="columns" :data="data" itemStyle="padding: 12px 12px 8px 12px;"></fl-card-item>
-          </fl-card>
+          <cdd-card title="Lease Contract">
+            <cdd-card-item :columns="columns" :data="data" itemStyle="padding: 18px 12px 8px 12px;"></cdd-card-item>
+            <cdd-card-item :columns="columns" :data="data" itemStyle="padding: 12px 12px 8px 12px;"></cdd-card-item>
+          </cdd-card>
         </a-col>
         <a-col :span="12">
         </a-col>
@@ -158,16 +158,16 @@ export default {
     <div style="width: 1000px">
       <a-row>
         <a-col :span="12">
-          <fl-card title="Lease Contract">
-            <fl-card-item :columns="columns" :data="data">
+          <cdd-card title="Lease Contract">
+            <cdd-card-item :columns="columns" :data="data">
               <template #businessLabel={label}>
                 <div>{{ label }}</div>
               </template>
               <template #business>
                 <div>222</div>
               </template>
-            </fl-card-item>
-          </fl-card>
+            </cdd-card-item>
+          </cdd-card>
         </a-col>
         <a-col :span="12">
         </a-col>
@@ -213,9 +213,9 @@ export default {
     <div style="width: 1000px">
       <a-row>
         <a-col :span="12">
-          <fl-card title="Lease Contract">
-            <fl-card-item :columns="columns" :data="data"></fl-card-item>
-          </fl-card>
+          <cdd-card title="Lease Contract">
+            <cdd-card-item :columns="columns" :data="data"></cdd-card-item>
+          </cdd-card>
         </a-col>
         <a-col :span="12">
         </a-col>
@@ -271,14 +271,14 @@ export default {
     <div style="width: 1000px">
       <a-row>
         <a-col :span="12">
-          <fl-card :type="type">
-            <fl-card-item :columns="columns" :data="data"></fl-card-item>
-          </fl-card>
+          <cdd-card :type="type">
+            <cdd-card-item :columns="columns" :data="data"></cdd-card-item>
+          </cdd-card>
         </a-col>
         <a-col :span="12">
-          <fl-card :type="type1">
-            <fl-card-item :columns="columns" :data="data"></fl-card-item>
-          </fl-card>
+          <cdd-card :type="type1">
+            <cdd-card-item :columns="columns" :data="data"></cdd-card-item>
+          </cdd-card>
         </a-col>
       </a-row>
     </div>
@@ -325,9 +325,9 @@ export default {
     <div style="width: 300px">
       <a-row :span="24">
         <a-col :span="24">
-          <fl-card :type="type">
-            <fl-lease-item title="Audit Trail" :columns="columns" :data="data"></fl-lease-item>
-          </fl-card>
+          <cdd-card :type="type">
+            <cdd-lease-item title="Audit Trail" :columns="columns" :data="data"></cdd-lease-item>
+          </cdd-card>
         </a-col>
       </a-row>
     </div>

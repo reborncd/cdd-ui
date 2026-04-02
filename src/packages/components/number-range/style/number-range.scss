@@ -18,16 +18,16 @@
         height: 34px;
 		display: flex;
 		align-items: center;
-		border: 1px solid var(--fl-col-line);
+		border: 1px solid var(--cdd-col-line);
 		border-radius: 4px;
         &.number-range-disabled {
-            border: 1px solid var(--fl-col-line);
+            border: 1px solid var(--cdd-col-line);
         }
         .iflorens-ui-input-number-handler-wrap {
             display: none !important;
         }
 		&.number-range-focus {
-			border: 1px solid var(--fl-col-fblue5);
+			border: 1px solid var(--cdd-col-fblue5);
 		}
 		.number-range-input {
             height: 32px;

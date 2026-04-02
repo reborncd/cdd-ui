@@ -22,7 +22,7 @@
         @blur="(e) => onDateBlur(e, 'fromDate')"
         @change="(e) => onChange(e, 'fromDate')"
       ></a-input-number>
-      <fl-icon class="number-range-icon" type="iflorens-SwapRight" />
+      <cdd-icon class="number-range-icon" type="iflorens-SwapRight" />
       <a-input-number
         class="number-range-input number-range-input-two"
         v-bind="attrs"
@@ -33,7 +33,7 @@
         @blur="(e) => onDateBlur(e, 'toDate')"
         @change="(e) => onChange(e, 'toDate')"
       ></a-input-number>
-      <div v-if="dateBarVisible" :class="`fl-number-active-bar`" :style="dateBarActiveStyle"></div>
+      <div v-if="dateBarVisible" :class="`cdd-number-active-bar`" :style="dateBarActiveStyle"></div>
     </div>
   </div>
 </template>
@@ -118,12 +118,12 @@ export default create({
 <style lang="scss" scoped>
 .number-range {
   position: relative;
-  .fl-icon {
-    color: var(--fl-col-disabledtext);
+  .cdd-icon {
+    color: var(--cdd-col-disabledtext);
     transform: translateX(-50%);
     margin: -2px;
   }
-  .fl-number-active-bar {
+  .cdd-number-active-bar {
     left: 0;
     height: 2px;
     position: absolute;
@@ -131,7 +131,7 @@ export default create({
     transition: all 0.3s ease-out;
     pointer-events: none;
     border-radius: 2px 2px 0px 0px;
-    background: var(--fl-col-fblue5);
+    background: var(--cdd-col-fblue5);
   }
 }
 </style>

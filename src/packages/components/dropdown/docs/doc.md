@@ -6,7 +6,7 @@
 ```vue demo
 <template>
     <div style="width: 80px">
-      <fl-dropdown v-model="value" :options="options" :trigger="['click']" :isShowDelIcon="true" ></fl-dropdown>
+      <cdd-dropdown v-model="value" :options="options" :trigger="['click']" :isShowDelIcon="true" ></cdd-dropdown>
       <!-- <div @click="ceshi">点击</div> -->
     </div>
 </template>
@@ -51,7 +51,7 @@ export default {
 ```vue demo
 <template>
     <div style="width: 150px">
-      <fl-dropdown v-model="value" :options="options" :type="type" :trigger="['click']"></fl-dropdown>
+      <cdd-dropdown v-model="value" :options="options" :type="type" :trigger="['click']"></cdd-dropdown>
     </div>
 </template>
 <script lang="ts">
@@ -80,9 +80,9 @@ export default {
 ```vue demo
 <template>
     <div style="width: 150px">
-      <fl-dropdown v-model="value" :options="options" :trigger="['click']">
+      <cdd-dropdown v-model="value" :options="options" :trigger="['click']">
         <div>点击我下啦</div>
-      </fl-dropdown>
+      </cdd-dropdown>
     </div>
 </template>
 <script lang="ts">

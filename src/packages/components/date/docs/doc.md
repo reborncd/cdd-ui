@@ -10,7 +10,7 @@
 ### 基础用法
 ```vue demo
 <template>
-  <fl-date
+  <cdd-date
     v-model="modelValue"
     :format="dateFormat"
   />
@@ -26,7 +26,7 @@ const modelValue = ref(dayjs('2024/10/01', dateFormat));
 ### 时间区间选择
 ```vue demo
 <template>
-  <fl-date
+  <cdd-date
     v-model="modelValue"
     dateType="rangePicker"
     :format="dateFormat"
@@ -42,7 +42,7 @@ const modelValue = ref([dayjs('2024-09-20', dateFormat), dayjs('2024-10-01', dat
 ### 日期+时间选择
 ```vue demo
 <template>
-  <fl-date
+  <cdd-date
     v-model="modelValue"
     :format="dateFormat"
     :showTime="'YYYY-MM-DD HH:mm:ss'"
@@ -58,7 +58,7 @@ const modelValue = ref(dayjs('2024/10/01 19:12:12', dateFormat));
 ### 日期+时间区间选择
 ```vue demo
 <template>
-  <fl-date
+  <cdd-date
     v-model="modelValue"
     dateType="rangePicker"
     :format="dateFormat"

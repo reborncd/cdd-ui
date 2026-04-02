@@ -6,14 +6,14 @@
 ```vue demo
 <template>
     <div style="width: 350px;">
-        <fl-annex :fileName="fileName">
+        <cdd-annex :fileName="fileName">
           <!-- <template #left>
             left
           </template>
           <template #right>
             right
           </template> -->
-        </fl-annex>
+        </cdd-annex>
     </div>
 </template>
 <script lang="ts">

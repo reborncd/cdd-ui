@@ -21,7 +21,7 @@
     >
       <slot v-if="slots['default']"></slot>
       <div v-else class="upload-btn">
-        <fl-icon class="upload-icon" :type="iconObj.icon" :style="iconObj.iconStyle"></fl-icon>
+        <cdd-icon class="upload-icon" :type="iconObj.icon" :style="iconObj.iconStyle"></cdd-icon>
         <span>{{ name }}</span>
       </div>
       <slot v-if="slots['preview']" name="preview"></slot>
@@ -113,7 +113,7 @@ export default create({
         emit('percent', parseFloat(percent.toFixed(2)));
         return `${parseFloat(percent.toFixed(2))}%`;
       },
-      class: 'fl-progress'
+      class: 'cdd-progress'
     };
 
     const previewVisible = ref(false);

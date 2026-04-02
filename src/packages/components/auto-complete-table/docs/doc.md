@@ -11,12 +11,12 @@
 ### 基础用法
 ```vue demo
 <template>
-  <fl-auto-complete-table
+  <cdd-auto-complete-table
     ref="autoCompleteTableRef"
     v-model="modelValue"
     v-bind="parmas"
   >
-  </fl-auto-complete-table>
+  </cdd-auto-complete-table>
 </template>
 <script lang="ts" setup>
 import { ref, watch, reactive } from 'vue'
@@ -47,12 +47,12 @@ const parmas = reactive({
 ### 分页用法1
 ```vue demo
 <template>
-  <fl-auto-complete-table
+  <cdd-auto-complete-table
     ref="autoCompleteTableRef"
     v-model="modelValue"
     v-bind="parmas"
   >
-  </fl-auto-complete-table>
+  </cdd-auto-complete-table>
 </template>
 <script lang="ts" setup>
 import { ref, watch, reactive } from 'vue'
@@ -83,12 +83,12 @@ const parmas = reactive({
 ### 分页表格用法
 ```vue demo
 <template>
-  <fl-auto-complete-table
+  <cdd-auto-complete-table
     ref="autoCompleteTableRef1"
     v-model="modelValue"
     v-bind="parmas"
   >
-  </fl-auto-complete-table>
+  </cdd-auto-complete-table>
 </template>
 <script lang="ts" setup>
 import { ref, watch, reactive } from 'vue'

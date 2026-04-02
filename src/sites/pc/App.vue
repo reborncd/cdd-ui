@@ -1,7 +1,7 @@
 <template>
-  <fl-config-provider :locale="enGb" :theme="themeData" prefix-cls="florens-ui">
+  <cdd-config-provider :locale="enGb" :theme="themeData" prefix-cls="florens-ui">
     <router-view></router-view>
-  </fl-config-provider>
+  </cdd-config-provider>
 </template>
 
 <script lang="ts">

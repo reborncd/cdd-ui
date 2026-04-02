@@ -12,14 +12,14 @@
 ```vue demo
 <template>
     <div style="width: 200px;font-size: 14px;font-family:Nunito;font-variation-settings: 'wght' 600;">
-      <fl-ellipsis 
+      <cdd-ellipsis 
       :content="text">
-      </fl-ellipsis>
+      </cdd-ellipsis>
       <br />
       <br />
-      <fl-ellipsis 
+      <cdd-ellipsis 
       :content="'test这是MKT文件夹L3jx7WgcQPcjHzaM8ZOKedL3jx7WgcQPcjHzaM8ZOKedL3jx7WgcQPcjHzaM8ZOKed'">
-      </fl-ellipsis>
+      </cdd-ellipsis>
     </div>
     
 </template>
@@ -41,11 +41,11 @@ export default {
 ```vue demo
 <template>
   <div style="font-size: 14px;">
-    <fl-ellipsis 
+    <cdd-ellipsis 
     :content="text"
     expand-text="More"
     collapse-text="Less">
-    </fl-ellipsis>
+    </cdd-ellipsis>
   </div>
 </template>
 
@@ -67,12 +67,12 @@ export default {
 ```vue demo
 <template>
   <div style="font-size: 14px;">
-    <fl-ellipsis 
+    <cdd-ellipsis 
     :rows="2"
     :content="text"
     expand-text="展开"
     collapse-text="收起">
-    </fl-ellipsis>
+    </cdd-ellipsis>
   </div>
 </template>
 

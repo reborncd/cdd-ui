@@ -5,7 +5,7 @@
 ```vue demo
 <template>
   <div class="tags-box" style="display:flex;flex-wrap: wrap;gap: 5px;">
-    <fl-tag bordered color="warning" closable>
+    <cdd-tag bordered color="warning" closable>
         <template #icon>
           <ExclamationCircleFilled />
         </template>
@@ -13,38 +13,38 @@
           <CloseOutlined />
         </template>
         Risk Content
-    </fl-tag>
-    <fl-tag bordered color="processing" closable>
+    </cdd-tag>
+    <cdd-tag bordered color="processing" closable>
         <template #icon>
           <InfoCircleOutlined />
         </template>
         Information Content
-    </fl-tag>
-    <fl-tag bordered color="error">
+    </cdd-tag>
+    <cdd-tag bordered color="error">
         <template #icon>
         <CloseCircleOutlined />
         <CloseCircleFilled />
         </template>
         Information Content
-    </fl-tag>
-    <fl-tag color="default" >default</fl-tag>
-    <fl-tag color="processing">processing</fl-tag>
-    <fl-tag color="error" >error</fl-tag>
-    <fl-tag color="warning" >warning</fl-tag>
-    <fl-tag color="success" >success</fl-tag>
-    <fl-tag color="cyan" >cyan</fl-tag>
-    <fl-tag color="purple" >purple</fl-tag>
-    <fl-tag color="magenta" >magenta</fl-tag>
-    <fl-tag color="geekblue" >Florens Blue</fl-tag> 
-    <fl-tag color="default" :bordered="false">default</fl-tag>
-    <fl-tag color="processing" :bordered="false">processing</fl-tag>
-    <fl-tag color="error" :bordered="false">error</fl-tag>
-    <fl-tag color="warning" :bordered="false">warning</fl-tag>
-    <fl-tag color="success" :bordered="false">success</fl-tag>
-    <fl-tag color="cyan" :bordered="false">cyan</fl-tag>
-    <fl-tag color="purple" :bordered="false">purple</fl-tag>
-    <fl-tag color="magenta" :bordered="false">magenta</fl-tag>
-    <fl-tag color="geekblue" :bordered="false">Florens Blue</fl-tag>
+    </cdd-tag>
+    <cdd-tag color="default" >default</cdd-tag>
+    <cdd-tag color="processing">processing</cdd-tag>
+    <cdd-tag color="error" >error</cdd-tag>
+    <cdd-tag color="warning" >warning</cdd-tag>
+    <cdd-tag color="success" >success</cdd-tag>
+    <cdd-tag color="cyan" >cyan</cdd-tag>
+    <cdd-tag color="purple" >purple</cdd-tag>
+    <cdd-tag color="magenta" >magenta</cdd-tag>
+    <cdd-tag color="geekblue" >Florens Blue</cdd-tag> 
+    <cdd-tag color="default" :bordered="false">default</cdd-tag>
+    <cdd-tag color="processing" :bordered="false">processing</cdd-tag>
+    <cdd-tag color="error" :bordered="false">error</cdd-tag>
+    <cdd-tag color="warning" :bordered="false">warning</cdd-tag>
+    <cdd-tag color="success" :bordered="false">success</cdd-tag>
+    <cdd-tag color="cyan" :bordered="false">cyan</cdd-tag>
+    <cdd-tag color="purple" :bordered="false">purple</cdd-tag>
+    <cdd-tag color="magenta" :bordered="false">magenta</cdd-tag>
+    <cdd-tag color="geekblue" :bordered="false">Florens Blue</cdd-tag>
   </div>
 </template>
 

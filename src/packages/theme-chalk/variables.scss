@@ -33,26 +33,26 @@
 }
 
 :root {
-  --fl-index-normal: 1;
+  --cdd-index-normal: 1;
   // refer to this website to get the bezier motion function detail
   //  https://cubic-bezier.com/#p1,p2,p3,p4 (change px as your function parameter)
-  --fl-transition-duration: #{map.get($transition-duration, 'default')};
-  --fl-transition-duration-fast: #{map.get($transition-duration, 'fast')};
-  --fl-col-mask: rgba(0, 0, 0, 0.6);
-  --fl-col-gradien-o: #C137A2;
-  --fl-col-gradien-t: #694ED6;
-  --fl-col-gradien-1-o: #D6E5FA;
-  --fl-col-gradien-1-t: #FFF9F9;
-  --fl-col-fblue-dark: #09215C;
-  --fl-col-fgold: #FDF47D;
-  --fl-col-background: #FFFFFF;
-  --fl-col-background-grey: #F5F6F9;
-  --fl-col-background-disabled: #F5F5F5;
-  --fl-col-maintext: rgba(0, 0, 0, 0.85);
-  --fl-col-secondarytext: #86909C;
-  --fl-col-secondarytext-new: #6B7184;
-  --fl-col-disabledtext: rgba(0, 0, 0, 0.25);
-  --fl-col-line: #D9D9D9;
+  --cdd-transition-duration: #{map.get($transition-duration, 'default')};
+  --cdd-transition-duration-fast: #{map.get($transition-duration, 'fast')};
+  --cdd-col-mask: rgba(0, 0, 0, 0.6);
+  --cdd-col-gradien-o: #C137A2;
+  --cdd-col-gradien-t: #694ED6;
+  --cdd-col-gradien-1-o: #D6E5FA;
+  --cdd-col-gradien-1-t: #FFF9F9;
+  --cdd-col-fblue-dark: #09215C;
+  --cdd-col-fgold: #FDF47D;
+  --cdd-col-background: #FFFFFF;
+  --cdd-col-background-grey: #F5F6F9;
+  --cdd-col-background-disabled: #F5F5F5;
+  --cdd-col-maintext: rgba(0, 0, 0, 0.85);
+  --cdd-col-secondarytext: #86909C;
+  --cdd-col-secondarytext-new: #6B7184;
+  --cdd-col-disabledtext: rgba(0, 0, 0, 0.25);
+  --cdd-col-line: #D9D9D9;
 
   @include generate-color-variables($colors);
 }

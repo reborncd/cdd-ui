@@ -9,7 +9,7 @@ import {
   getCurrentInstance
 } from 'vue';
 export function createComponent(name: string) {
-  const componentName = 'Fl' + name;
+  const componentName = 'Cdd' + name;
 
   const useGlobalConfig = () => {
     const vm: any = getCurrentInstance();

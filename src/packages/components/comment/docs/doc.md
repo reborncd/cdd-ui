@@ -6,7 +6,7 @@
 <template>
   <div style="width: 800px; height: 700px; padding: 24px 24px 24px 0;">
     <button @click="clear">清空</button>
-    <fl-comment-content :selectTypeCommentary="selectTypeCommentary"
+    <cdd-comment-content :selectTypeCommentary="selectTypeCommentary"
     :canAddCommentary="true"
     :maxLength="0"
     :showCount="true"
@@ -17,7 +17,7 @@
       <!-- <template #title-box="row">
         <div>{{ row }}</div>
       </template> -->
-    </fl-comment-content>
+    </cdd-comment-content>
   </div>
 </template>
 
@@ -78,7 +78,7 @@ export default {
 ```vue demo
 <template>
   <div style="width: 800px;padding: 24px;background: #F5F6F9;">
-    <fl-comment-textarea :selectTypeCommentary="selectTypeCommentary" :showCount="true" v-model="value" @saveTextareaConfirm="saveTextareaConfirm"></fl-comment-textarea>
+    <cdd-comment-textarea :selectTypeCommentary="selectTypeCommentary" :showCount="true" v-model="value" @saveTextareaConfirm="saveTextareaConfirm"></cdd-comment-textarea>
   </div>
 </template>
 
@@ -110,7 +110,7 @@ export default {
 ```vue demo
 <template>
   <div style="width: 800px;padding: 24px;background: #F5F6F9;">
-    <fl-comment-item :commentaryData="selectTypeCommentary" :showCount="true" :canAddCommentary="true" @saveItemConfirm="saveItemConfirm"></fl-comment-item>
+    <cdd-comment-item :commentaryData="selectTypeCommentary" :showCount="true" :canAddCommentary="true" @saveItemConfirm="saveItemConfirm"></cdd-comment-item>
   </div>
 </template>
 

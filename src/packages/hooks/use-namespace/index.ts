@@ -1,7 +1,7 @@
 import { unref, computed } from 'vue';
 import { useGlobalConfig } from '../use-global-config';
 
-const defaultNamespace = 'fl';
+const defaultNamespace = 'cdd';
 const statePrefix = 'is-';
 
 /**

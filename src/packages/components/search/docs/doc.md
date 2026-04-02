@@ -5,7 +5,7 @@
 
 ```vue demo
 <template>
-  <fl-search
+  <cdd-search
     :isShowCollectBtn="false"
     v-model:form="formData"
     :label-col="{ span: 4 }"
@@ -30,7 +30,7 @@
         </a-col>
       </a-row>
     </template>
-  </fl-search>
+  </cdd-search>
 </template>
 <script lang="ts" setup>
 import { ref, provide } from 'vue'
@@ -330,7 +330,7 @@ const onSearch = (data: any, type?: string, form) => {
 #### 支持配置=日期的选择方式
 ```vue demo
 <template>
-  <fl-search
+  <cdd-search
     :isShowCollectBtn="false"
     v-model:form="formData"
     :label-col="{ span: 4 }"
@@ -355,7 +355,7 @@ const onSearch = (data: any, type?: string, form) => {
         </a-col>
       </a-row>
     </template> -->
-  </fl-search>
+  </cdd-search>
 </template>
 <script lang="ts" setup>
 import { ref, provide } from 'vue'
@@ -424,7 +424,7 @@ const onSearch = (data: any, type?: string, form) => {
 #### 支持月份区间的选择方式
 ```vue demo
 <template>
-  <fl-search
+  <cdd-search
     :isShowCollectBtn="false"
     v-model:form="formData"
     :label-col="{ span: 4 }"
@@ -436,7 +436,7 @@ const onSearch = (data: any, type?: string, form) => {
     @reset="resetForm"
     @search="onSearch"
   >
-  </fl-search>
+  </cdd-search>
 </template>
 <script lang="ts" setup>
 import { ref, provide } from 'vue'
@@ -500,7 +500,7 @@ const onSearch = (data: any, type?: string, form) => {
 ### Form 配置
 ```vue demo
 <template>
-  <fl-form
+  <cdd-form
     v-model:form="defaultForm"
     :label-col="{ span: 4 }"
     :wrapper-col="{ span: 18 }"
@@ -514,7 +514,7 @@ const onSearch = (data: any, type?: string, form) => {
         </a-col>
       </a-row>
     </template>
-  </fl-form>
+  </cdd-form>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
@@ -758,7 +758,7 @@ const defaultForm = ref({
 ### Search 基础用法
 ```vue demo
 <template>
-  <fl-search
+  <cdd-search
     v-model:form="form"
     :label-col="{ span: 3 }"
     :wrapper-col="{ span: 18 }"

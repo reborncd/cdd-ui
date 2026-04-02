@@ -1,8 +1,8 @@
 <template>
-  <div :class="[ns.b(), type == 'card' ? 'fl-search-card' : 'fl-search-list', colorMode==='darkBlue'?'search-darkBlue':'']" ref="searchBoxRef">
+  <div :class="[ns.b(), type == 'card' ? 'cdd-search-card' : 'cdd-search-list', colorMode==='darkBlue'?'search-darkBlue':'']" ref="searchBoxRef">
     <div class="page-content">
       <div class="page-top" v-if="type == 'card'">
-        <fl-collect
+        <cdd-collect
           :isShowCollectBtn="isShowCollectBtn"
           class="page-collect"
           :title="title"
@@ -28,14 +28,14 @@
         >
           <a-row class="search-input">
             <a-col :span="type == 'card' ? 18 : 24">
-              <fl-search-input v-if="isShowKeyWordInput&&colorMode!=='darkBlue'" v-model="searchValue" allowClear placeholder="Type keyword to search" />
+              <cdd-search-input v-if="isShowKeyWordInput&&colorMode!=='darkBlue'" v-model="searchValue" allowClear placeholder="Type keyword to search" />
             </a-col>
             <a-col v-if="colorMode!=='darkBlue'" :span="24">
               <div class="tips">{{ searchText }}</div>
               <slot name="form-tips"></slot>
             </a-col>
             <div class="search-dropdown-card" v-if="hideSaveSearchSelect&&colorMode!=='darkBlue'">
-              <fl-dropdown
+              <cdd-dropdown
                 v-if="isShowSaveSearch"
                 v-model="searchCondition"
                 :dropdownWidth="dropdownWidth"
@@ -48,7 +48,7 @@
               />
             </div>
           </a-row>
-          <fl-form
+          <cdd-form
             v-bind="attrs"
             :type="type"
             :isShowDown="isShowDown"
@@ -62,14 +62,14 @@
             <template #form-bottom>
               <slot name="form-bottom"></slot>
             </template>
-          </fl-form>
+          </cdd-form>
         </div>
         <slot name="form-right"></slot>
       </div>
       <div class="page-bottom" :class="{'page-bottom-darkBlue':colorMode==='darkBlue'}" v-if="type == 'card'">
         <a-space :size="15">
           <a-button class="search-btn" :class="{'search-btn-darkBlue':colorMode==='darkBlue'}" @click="onSearch" v-if="showSearchBtn">Search</a-button>
-          <fl-icon-button
+          <cdd-icon-button
             class="iflorens-redo"
             :class="{'reset-btn-darkBlue':colorMode==='darkBlue'}"
             icon="iflorens-Redo"
@@ -79,10 +79,10 @@
             @click="resetForm"
           >
             Reset
-          </fl-icon-button>
+          </cdd-icon-button>
         </a-space>
         <a-divider v-if="colorMode!=='darkBlue'" type="vertical"></a-divider>
-        <fl-icon-button
+        <cdd-icon-button
           v-if="isShowSaveSearch&&colorMode!=='darkBlue'"
           class="iflorens-save"
           icon="iflorens-Save"
@@ -92,17 +92,17 @@
           @click="saveSearchCriteria"
         >
           Save Search Criteria
-        </fl-icon-button>
+        </cdd-icon-button>
       </div>
       <a-row v-else class="page-bottom" :class="[type == 'card' ? 'page-bottom' : 'page-bottom page-list',colorMode==='darkBlue'?'page-bottom-darkBlue':'']">
         <a-col :span="24">
           <a-button class="search-btn" :class="{'search-btn-darkBlue':colorMode==='darkBlue'}" @click="onSearch">Search</a-button>
         </a-col>
-        <fl-icon-button :class="{'reset-btn-darkBlue':colorMode==='darkBlue'}" icon="iflorens-Redo" :iconStyle="iconStyle" type="link" size="small" @click="resetForm">
+        <cdd-icon-button :class="{'reset-btn-darkBlue':colorMode==='darkBlue'}" icon="iflorens-Redo" :iconStyle="iconStyle" type="link" size="small" @click="resetForm">
           Reset
-        </fl-icon-button>
+        </cdd-icon-button>
         <a-divider type="vertical" v-if="isShowSaveSearch&&colorMode!=='darkBlue'"></a-divider>
-        <fl-icon-button
+        <cdd-icon-button
           v-if="isShowSaveSearch&&colorMode!=='darkBlue'"
           icon="iflorens-Save"
           type="link"
@@ -112,11 +112,11 @@
           @click="saveSearchCriteria"
         >
           Save Search Criteria
-        </fl-icon-button>
+        </cdd-icon-button>
       </a-row>
     </div>
     <!-- Save Search Criteria弹窗 -->
-    <fl-modal
+    <cdd-modal
       v-model:open="open"
       title="Save Search Criteria"
       okText="Confirm"
@@ -129,7 +129,7 @@
           <a-input :maxlength="50" v-model:value="searchForm.name" placeholder="Please input" />
         </a-form-item>
       </a-form>
-    </fl-modal>
+    </cdd-modal>
   </div>
 </template>
 
@@ -188,7 +188,7 @@ export default create({
       name: ''
     });
     const iconStyle = ref({
-      color: 'var(--fl-col-fblue5)'
+      color: 'var(--cdd-col-fblue5)'
     });
     const validateName = (_rule: Rule, value: string) => {
       if (!value) return Promise.reject('Please complete');
@@ -325,7 +325,7 @@ export default create({
       if (!isSomeValue) {
         return message.error({
           content: customContent,
-          class: 'fl-search-message'
+          class: 'cdd-search-message'
         });
       }
       open.value = true;
@@ -497,7 +497,7 @@ export default create({
 }
 .search-dropdown-card {
   width: 100%;
-  :deep(.fl-dropdown) {
+  :deep(.cdd-dropdown) {
     max-width: fit-content !important;
     width: auto !important;
     .content {
@@ -518,11 +518,11 @@ export default create({
 }
 </style>
 <style lang="scss">
-.fl-search-message {
+.cdd-search-message {
   .ant-message-notice-content {
     width: 395px;
-    border: 1px solid var(--fl-col-red8);
-    background: var(--fl-col-red10);
+    border: 1px solid var(--cdd-col-red8);
+    background: var(--cdd-col-red10);
     border-radius: 2px;
     position: relative;
     text-align: left;

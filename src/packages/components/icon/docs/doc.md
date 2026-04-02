@@ -9,7 +9,7 @@
     <div class="md-icon-font">
         <a-row>
             <a-col :span="2" v-for="(item, index) in iconJson.glyphs" :key="index" @click="handleCopy(item.font_class)">
-                <fl-icon :type="`iflorens-${item.font_class}`"></fl-icon>
+                <cdd-icon :type="`iflorens-${item.font_class}`"></cdd-icon>
                 <div class="icon-class">iflorens-{{item.font_class}}</div>
             </a-col>
         </a-row>

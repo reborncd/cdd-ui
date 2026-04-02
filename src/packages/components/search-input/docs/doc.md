@@ -6,7 +6,7 @@
 ```vue demo
 <template>
     <!-- <a-button style="margin-bottom: 10px;" @click="ceshi">测试</a-button> -->
-    <fl-search-input @onInput="input" v-model="value" placeholder="input search" :allowClear="true"></fl-search-input>
+    <cdd-search-input @onInput="input" v-model="value" placeholder="input search" :allowClear="true"></cdd-search-input>
 </template>
 <script lang="ts">
 import { defineComponent, ref, h, getCurrentInstance } from 'vue'

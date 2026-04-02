@@ -4,7 +4,7 @@
 ```vue demo
 <template>
   <div>
-    <fl-number-range v-model="modelValue" />
+    <cdd-number-range v-model="modelValue" />
     <!-- <div>{{ modelValue }}</div> -->
   </div>
 </template>
@@ -26,7 +26,7 @@ export default {
 ```vue demo
 <template>
   <div>
-    <fl-number-range v-model="modelValue" :disabled="true" />
+    <cdd-number-range v-model="modelValue" :disabled="true" />
     <!-- <div>{{ modelValue }}</div> -->
   </div>
 </template>

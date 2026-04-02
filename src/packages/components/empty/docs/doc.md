@@ -5,7 +5,7 @@
 ```vue demo
 <template>
    <div style="height: 250px;">
-      <fl-empty description="No Attachments"></fl-empty>
+      <cdd-empty description="No Attachments"></cdd-empty>
    </div>
 </template>
 ```
@@ -13,7 +13,7 @@
 ```vue demo
 <template>
    <div style="height: 250px;">
-      <fl-empty description="No Attachments" type="noData"></fl-empty>
+      <cdd-empty description="No Attachments" type="noData"></cdd-empty>
    </div>
 </template>
 ```
@@ -21,7 +21,7 @@
 ```vue demo
 <template>
    <div style="height: 250px;">
-      <fl-empty description="No Attachments" type="noItem"></fl-empty>
+      <cdd-empty description="No Attachments" type="noItem"></cdd-empty>
    </div>
 </template>
 ```
@@ -29,7 +29,7 @@
 ```vue demo
 <template>
    <div style="height: 250px;">
-      <fl-empty description="No Attachments" :isShowBtn="true"></fl-empty>
+      <cdd-empty description="No Attachments" :isShowBtn="true"></cdd-empty>
    </div>
 </template>
 ```

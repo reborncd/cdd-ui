@@ -6,9 +6,9 @@
 
 ```vue demo
 <template>
-    <fl-icon-button icon="iflorens-Edit" :iconStyle="iconStyle" type="link" size="small">
+    <cdd-icon-button icon="iflorens-Edit" :iconStyle="iconStyle" type="link" size="small">
       aaa
-    </fl-icon-button>
+    </cdd-icon-button>
 </template>
 
 <script lang="ts">
@@ -30,8 +30,8 @@ export default {
 
 ```vue demo
 <template>
-    <fl-icon-button :icon="EditOutlined" :iconStyle="iconStyle" type="link" size="small">
-    </fl-icon-button>
+    <cdd-icon-button :icon="EditOutlined" :iconStyle="iconStyle" type="link" size="small">
+    </cdd-icon-button>
 </template>
 
 <script lang="ts">

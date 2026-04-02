@@ -4,7 +4,7 @@
 
 ```vue demo
 <template>
-    <fl-header title="Down Payment" :offsetTop="-250"></fl-header>
+    <cdd-header title="Down Payment" :offsetTop="-250"></cdd-header>
 </template>
 
 ```
@@ -13,14 +13,14 @@
 
 ```vue demo
 <template>
-    <fl-header title="Down Payment" :offsetTop="-250">
+    <cdd-header title="Down Payment" :offsetTop="-250">
         <template #title-left>
             <div>left</div>
         </template>
         <template #title-right>
             <div>right</div>
         </template>
-    </fl-header>
+    </cdd-header>
 </template>
 
 ```

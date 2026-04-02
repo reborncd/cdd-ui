@@ -1,17 +1,17 @@
 <template>
   <div
-    :class="[`fl-scrollbar fl-scrollbar-${trigger}`, native ? '' : 'el-scrollbar__wrap--hidden-default']"
+    :class="[`cdd-scrollbar cdd-scrollbar-${trigger}`, native ? '' : 'el-scrollbar__wrap--hidden-default']"
     :style="scrollStyle"
     ref="scrollbar"
   >
     <div
-      :class="{ 'fl-scrollbar-wrap': true, [`fl-scrollbar-wrap-${direction}`]: true }"
+      :class="{ 'cdd-scrollbar-wrap': true, [`cdd-scrollbar-wrap-${direction}`]: true }"
       :id="scrollId"
       ref="wrapRef"
       :style="scrollWrapStyle"
       @scroll="handleScroll"
     >
-      <div ref="scrollBarContent" :class="['fl-scrollbar-content', viewClass]" :style="viewStyle">
+      <div ref="scrollBarContent" :class="['cdd-scrollbar-content', viewClass]" :style="viewStyle">
         <slot />
       </div>
       <template v-if="!native">
@@ -23,7 +23,7 @@
           :barStyle="vBarStyle"
           :thumbStyle="vThumbStyle"
           v-show="hasVBar"
-          class="fl-scrollbar-bar-v-bar"
+          class="cdd-scrollbar-bar-v-bar"
           v-if="direction !== 'x'"
         ></Bar>
 
@@ -35,15 +35,15 @@
           :barStyle="hBarStyle"
           :thumbStyle="hThumbStyle"
           v-show="hasHBar"
-          class="fl-scrollbar-bar-h-bar"
+          class="cdd-scrollbar-bar-h-bar"
           v-if="direction !== 'y'"
         ></Bar>
       </template>
-      <div class="fl-scrollbar-loading" v-show="scrollLoading">
+      <div class="cdd-scrollbar-loading" v-show="scrollLoading">
         加载中...
       </div>
-      <div class="fl-scrollbar-bottom-line" v-show="finished && hasLoad && !scrollLoading">
-        <p class="fl-scrollbar-bottom-text">{{ finishedText }}</p>
+      <div class="cdd-scrollbar-bottom-line" v-show="finished && hasLoad && !scrollLoading">
+        <p class="cdd-scrollbar-bottom-text">{{ finishedText }}</p>
       </div>
     </div>
   </div>

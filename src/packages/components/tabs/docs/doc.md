@@ -8,9 +8,9 @@ Tabs 组件提供了选项卡的功能，默认选中第一个标签页，你也
 
 ``` vue demo
 <template>
-  <fl-tabs style="width: 600px;"  :tab-position="'top'" v-model="activeName" class="demo-tabs" @tab-click="handleClick" :editable="true">
-    <fl-tab-pane v-for="(item, index) in 30" :label="`General Information${index}`" :name="item">{{ `General Information${index}` }}</fl-tab-pane>
-  </fl-tabs>
+  <cdd-tabs style="width: 600px;"  :tab-position="'top'" v-model="activeName" class="demo-tabs" @tab-click="handleClick" :editable="true">
+    <cdd-tab-pane v-for="(item, index) in 30" :label="`General Information${index}`" :name="item">{{ `General Information${index}` }}</cdd-tab-pane>
+  </cdd-tabs>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
@@ -38,40 +38,40 @@ const handleClick = (tab: string, event: Event) => {
     <a-button label="bottom" @click="changPos('bottom')">bottom</a-button>
     <a-button label="left" @click="changPos('left')">left</a-button>
 
-  <fl-tabs
+  <cdd-tabs
     style="height: 200px"
     :tab-position="tabPosition"
     class="demo-tabs"
   >
-  <fl-tab-pane label="User" 
+  <cdd-tab-pane label="User" 
     style="height: 100%;padding: 32px;
       background-color: #f4f5f7;
       color: #6b778c;
       font-size: 32px;
       font-weight: 600;">User
-    </fl-tab-pane>
-    <fl-tab-pane label="Config" 
+    </cdd-tab-pane>
+    <cdd-tab-pane label="Config" 
     style="height: 100%;padding: 32px;
       background-color: #f4f5f7;
       color: #6b778c;
       font-size: 32px;
       font-weight: 600;">Config
-    </fl-tab-pane>
-    <fl-tab-pane label="Role" 
+    </cdd-tab-pane>
+    <cdd-tab-pane label="Role" 
     style="height: 100%;padding: 32px;
       background-color: #f4f5f7;
       color: #6b778c;
       font-size: 32px;
       font-weight: 600;">Role
-    </fl-tab-pane>
-    <fl-tab-pane label="Task" 
+    </cdd-tab-pane>
+    <cdd-tab-pane label="Task" 
     style="height: 100%;padding: 32px;
       background-color: #f4f5f7;
       color: #6b778c;
       font-size: 32px;
       font-weight: 600;">Task
-    </fl-tab-pane>
-  </fl-tabs>
+    </cdd-tab-pane>
+  </cdd-tabs>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
@@ -92,19 +92,19 @@ const changPos = (str) => {
 
 ```vue demo
 <template>
-  <fl-tabs class="demo-tabs">
-    <fl-tab-pane>
+  <cdd-tabs class="demo-tabs">
+    <cdd-tab-pane>
       <template #label>
         <span>
-          <fl-icon-button icon="iflorens-otherfile" :iconStyle="{}" type="line"></fl-icon-button>Route
+          <cdd-icon-button icon="iflorens-otherfile" :iconStyle="{}" type="line"></cdd-icon-button>Route
         </span>
       </template>
       Route
-    </fl-tab-pane>
-    <fl-tab-pane label="Config">Config</fl-tab-pane>
-    <fl-tab-pane label="Role">Role</fl-tab-pane>
-    <fl-tab-pane label="Task">Task</fl-tab-pane>
-  </fl-tabs>
+    </cdd-tab-pane>
+    <cdd-tab-pane label="Config">Config</cdd-tab-pane>
+    <cdd-tab-pane label="Role">Role</cdd-tab-pane>
+    <cdd-tab-pane label="Task">Task</cdd-tab-pane>
+  </cdd-tabs>
 </template>
 
 <script lang="ts" setup>
@@ -118,22 +118,22 @@ const changPos = (str) => {
 
 ```vue demo
 <template>
-  <fl-tabs class="demo-tabs">
+  <cdd-tabs class="demo-tabs">
     <template #tabs-header-left>
       <div>测试</div>
     </template>
-    <fl-tab-pane>
+    <cdd-tab-pane>
       <template #label>
         <span>
-          <fl-icon-button icon="iflorens-otherfile" :iconStyle="{}" type="line"></fl-icon-button>Route
+          <cdd-icon-button icon="iflorens-otherfile" :iconStyle="{}" type="line"></cdd-icon-button>Route
         </span>
       </template>
       Route
-    </fl-tab-pane>
-    <fl-tab-pane label="Config">Config</fl-tab-pane>
-    <fl-tab-pane label="Role">Role</fl-tab-pane>
-    <fl-tab-pane label="Task">Task</fl-tab-pane>
-  </fl-tabs>
+    </cdd-tab-pane>
+    <cdd-tab-pane label="Config">Config</cdd-tab-pane>
+    <cdd-tab-pane label="Role">Role</cdd-tab-pane>
+    <cdd-tab-pane label="Task">Task</cdd-tab-pane>
+  </cdd-tabs>
 </template>
 
 <script lang="ts" setup>
@@ -147,22 +147,22 @@ const changPos = (str) => {
 
 ```vue demo
 <template>
-  <fl-tabs class="demo-tabs">
+  <cdd-tabs class="demo-tabs">
     <template #tabs-header-right>
       <div>测试</div>
     </template>
-    <fl-tab-pane>
+    <cdd-tab-pane>
       <template #label>
         <span>
-          <fl-icon-button icon="iflorens-otherfile" :iconStyle="{}" type="line"></fl-icon-button>Route
+          <cdd-icon-button icon="iflorens-otherfile" :iconStyle="{}" type="line"></cdd-icon-button>Route
         </span>
       </template>
       Route
-    </fl-tab-pane>
-    <fl-tab-pane label="Config">Config</fl-tab-pane>
-    <fl-tab-pane label="Role">Role</fl-tab-pane>
-    <fl-tab-pane label="Task">Task</fl-tab-pane>
-  </fl-tabs>
+    </cdd-tab-pane>
+    <cdd-tab-pane label="Config">Config</cdd-tab-pane>
+    <cdd-tab-pane label="Role">Role</cdd-tab-pane>
+    <cdd-tab-pane label="Task">Task</cdd-tab-pane>
+  </cdd-tabs>
 </template>
 
 <script lang="ts" setup>
@@ -183,12 +183,12 @@ const changPos = (str) => {
     <a-button label="left" @click="changPos('left')">left</a-button>
   </div>
 
-  <fl-tabs class="demo-tabs" type="card" :tab-position="tabPosition">
-    <fl-tab-pane label="Route">Route</fl-tab-pane>
-    <fl-tab-pane label="Config">Config</fl-tab-pane>
-    <fl-tab-pane label="Role">Role</fl-tab-pane>
-    <fl-tab-pane label="Task">Task</fl-tab-pane>
-  </fl-tabs>
+  <cdd-tabs class="demo-tabs" type="card" :tab-position="tabPosition">
+    <cdd-tab-pane label="Route">Route</cdd-tab-pane>
+    <cdd-tab-pane label="Config">Config</cdd-tab-pane>
+    <cdd-tab-pane label="Role">Role</cdd-tab-pane>
+    <cdd-tab-pane label="Task">Task</cdd-tab-pane>
+  </cdd-tabs>
 </template>
 
 <script lang="ts" setup>

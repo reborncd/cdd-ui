@@ -5,9 +5,9 @@
         <img class="logo" :src="logo" alt="">
       </div>
       <div class="flex-1">
-        <fl-scroll ref="navScrollbarRef" class="doc-sroll-aside-height" :native="true" trigger="none" direction="y">
+        <cdd-scroll ref="navScrollbarRef" class="doc-sroll-aside-height" :native="true" trigger="none" direction="y">
           <doc-nav></doc-nav>
-        </fl-scroll>
+        </cdd-scroll>
       </div>
     </div>
     <a-layout style="flex: 1; overflow: hidden;">
@@ -15,13 +15,13 @@
         <doc-header></doc-header>
       </a-layout-header>
       <a-layout-content class="doc-main-wapper">
-        <fl-scroll  ref="mainScrollbarRef" class="doc-sroll-main-height" :native="true" trigger="none" direction="y">
+        <cdd-scroll  ref="mainScrollbarRef" class="doc-sroll-main-height" :native="true" trigger="none" direction="y">
           <div class="doc-content">
             <div class="doc-content-document">
               <router-view />
             </div>
           </div>
-        </fl-scroll>
+        </cdd-scroll>
       </a-layout-content>
     </a-layout>
   </a-layout>

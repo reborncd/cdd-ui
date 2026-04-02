@@ -17,7 +17,7 @@
   > .button-content {
     order: 2;
   }
-  > .fl-icon {
+  > .cdd-icon {
     order: 1;
     margin-right: 8px;
   }
@@ -25,7 +25,7 @@
     > .button-content {
       order: 1;
     }
-    > .fl-icon {
+    > .cdd-icon {
       margin-left: 8px;
       margin-right: 0px;
       order: 2;
@@ -33,55 +33,55 @@
   }
   &.long-button {
     text-align: center;
-    background: var(--fl-col-background);
-    border: 1px dashed var(--fl-col-line);
+    background: var(--cdd-col-background);
+    border: 1px dashed var(--cdd-col-line);
     height: 32px;
     border-radius: 99px;
-    color: var(--fl-col-fblue5);
+    color: var(--cdd-col-fblue5);
     &:hover {
-      border: 1px dashed var(--fl-col-fblue6);
-      color: var(--fl-col-fblue6);
-      .fl-icon {
-        color: var(--fl-col-fblue6) !important;
+      border: 1px dashed var(--cdd-col-fblue6);
+      color: var(--cdd-col-fblue6);
+      .cdd-icon {
+        color: var(--cdd-col-fblue6) !important;
       }
     }
     &:active {
-      border: 1px dashed var(--fl-col-fblue4);
-      color: var(--fl-col-fblue4);
-      .fl-icon {
-        color: var(--fl-col-fblue4) !important;
+      border: 1px dashed var(--cdd-col-fblue4);
+      color: var(--cdd-col-fblue4);
+      .cdd-icon {
+        color: var(--cdd-col-fblue4) !important;
       }
     }
   }
   &.primary-button {
     padding: 5px 16px;
     border-radius: 4px;
-    background: var(--fl-col-fblue5);
+    background: var(--cdd-col-fblue5);
     height: auto;
     color: #ffffff;
     &:hover {
-      background: var(--fl-col-fblue6);
+      background: var(--cdd-col-fblue6);
       color: #fff;
-      .fl-icon {
-        color: var(--fl-col-fblue6) !important;
+      .cdd-icon {
+        color: var(--cdd-col-fblue6) !important;
       }
     }
     &:active {
-      background: var(--fl-col-fblue4);
+      background: var(--cdd-col-fblue4);
       color: #fff;
-      .fl-icon {
-        color: var(--fl-col-fblue4) !important;
+      .cdd-icon {
+        color: var(--cdd-col-fblue4) !important;
       }
     }
     @include when(disabled) {
       &,
       &:hover,
       &:active {
-        background: var(--fl-col-neutral11);
-        border: 1px solid var(--fl-col-line);
-        color: var(--fl-col-disabledtext);
-        .fl-icon {
-          color: var(--fl-col-disabledtext) !important;
+        background: var(--cdd-col-neutral11);
+        border: 1px solid var(--cdd-col-line);
+        color: var(--cdd-col-disabledtext);
+        .cdd-icon {
+          color: var(--cdd-col-disabledtext) !important;
         }
       }
     }
@@ -90,21 +90,21 @@
     padding: 5px 16px;
     border-radius: 4px;
     height: auto;
-    background: var(--fl-col-background);
-    color: var(--fl-col-fblue5);
-    border: 1px solid var(--fl-col-line);
+    background: var(--cdd-col-background);
+    color: var(--cdd-col-fblue5);
+    border: 1px solid var(--cdd-col-line);
     &:hover {
-      background: var(--fl-col-background);
-      color: var(-fl-col-fblue5);
-      .fl-icon {
-        color: var(-fl-col-fblue5) !important;
+      background: var(--cdd-col-background);
+      color: var(--cdd-col-fblue5);
+      .cdd-icon {
+        color: var(--cdd-col-fblue5) !important;
       }
     }
     &:active {
-      background: var(--fl-col-background);
-      color: var(-fl-col-fblue5);
-      .fl-icon {
-        color: var(-fl-col-fblue5) !important;
+      background: var(--cdd-col-background);
+      color: var(--cdd-col-fblue5);
+      .cdd-icon {
+        color: var(--cdd-col-fblue5) !important;
       }
     }
   }

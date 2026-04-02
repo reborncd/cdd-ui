@@ -4,7 +4,7 @@
 
 ```vue demo
 <template>
-    <fl-data-export :request="fetch" :requestFileId="inquiryDownload" :requestFileParams="requestFileParams" type="primary" downFileName="x.xlsx"></fl-data-export>
+    <cdd-data-export :request="fetch" :requestFileId="inquiryDownload" :requestFileParams="requestFileParams" type="primary" downFileName="x.xlsx"></cdd-data-export>
 </template>
 
 <script lang="ts">
@@ -44,11 +44,11 @@ export default {
 
 ```vue demo
 <template>
-    <fl-data-export :request="fetch" :requestFileId="testCustomerExcel" type="primary" downFileName="x.xlsx">
+    <cdd-data-export :request="fetch" :requestFileId="testCustomerExcel" type="primary" downFileName="x.xlsx">
       <template v-slot:customize="{ exportClick }" #customize>
-        <fl-button type="primary" @click="exportClick">自定义按钮</fl-button>
+        <cdd-button type="primary" @click="exportClick">自定义按钮</cdd-button>
       </template>
-    </fl-data-export>
+    </cdd-data-export>
 </template>
 
 <script lang="ts">

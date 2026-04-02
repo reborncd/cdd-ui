@@ -19,7 +19,7 @@ $transition-duration: map.merge(
   @each $type, $colorList in $colors-map {
     @for $i from 1 through length($colorList) {
       $color: nth($colorList, $i);
-      $variableName: "--fl-col-#{$type}#{$i}";
+      $variableName: "--cdd-col-#{$type}#{$i}";
       
       #{$variableName}: #{$color};
     }

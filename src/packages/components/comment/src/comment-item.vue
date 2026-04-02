@@ -25,10 +25,10 @@
                 </span>
               </a-space>
             </template>
-            <fl-icon
+            <cdd-icon
               v-if="commentaryData.createTime !== commentaryData.updateTime"
               type="iflorens-ExclamationCircle"
-            ></fl-icon>
+            ></cdd-icon>
           </a-tooltip>
         </template>
         <template v-else>
@@ -37,21 +37,21 @@
       </div>
       <div class="right-icon">
         <template v-if="!isEdit && canAddCommentary">
-          <fl-icon type="iflorens-Edit" @click="editCommentary" />
+          <cdd-icon type="iflorens-Edit" @click="editCommentary" />
         </template>
         <template v-if="!isEdit && canAddCommentary && isShowShrinkIcon">
           <a-divider type="vertical" style="background-color: #d9d9d9" />
         </template>
         <!-- 放大缩小 -->
-        <fl-icon
+        <cdd-icon
           v-if="isShowShrinkIcon"
           :type="modeType === 'shrink' ? 'iflorens-ExpandAlt' : 'iflorens-Shrink'"
           @click="shrinkClick"
-        ></fl-icon>
+        ></cdd-icon>
       </div>
     </div>
     <!-- 编辑态 -->
-    <fl-comment-textarea
+    <cdd-comment-textarea
       class="coment-item-save"
       ref="commentItemRef"
       v-model="itemData.commentary"
@@ -69,7 +69,7 @@
           Save
         </a-button>
       </template>
-    </fl-comment-textarea>
+    </cdd-comment-textarea>
     <!-- 文本态 -->
     <div v-if="!isEdit" class="commentary-item-text-cnt">
       <div class="item-cnt-text">
@@ -79,7 +79,7 @@
       </div>
       <div v-if="showAll && modeType !== 'fullScreen'" class="item-cnt-text-foot">
         <a-space class="text-foot-btn" :size="8" @click="fullScreenItem">
-          <fl-icon type="iflorens-ExpandAlt" />
+          <cdd-icon type="iflorens-ExpandAlt" />
           <span>Show All</span>
         </a-space>
       </div>

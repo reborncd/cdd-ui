@@ -9,28 +9,28 @@
     overflow: hidden;
     background: transparent;
 
-    &.fl-scrollbar-hover {
-      .fl-scrollbar-bar {
+    &.cdd-scrollbar-hover {
+      .cdd-scrollbar-bar {
         opacity: 0;
       }
 
       &:hover,
       &:focus,
       &:active {
-        .fl-scrollbar-bar {
+        .cdd-scrollbar-bar {
           opacity: 1;
         }
       }
     }
 
-    &.fl-scrollbar-always {
-      .fl-scrollbar-bar {
+    &.cdd-scrollbar-always {
+      .cdd-scrollbar-bar {
         opacity: 1;
       }
     }
 
-    &.fl-scrollbar-none {
-      .fl-scrollbar-bar {
+    &.cdd-scrollbar-none {
+      .cdd-scrollbar-bar {
         opacity: 0;
       }
     }
@@ -58,13 +58,13 @@
       height: 0;
       display: none;
     }
-    .fl-scrollbar-loading {
+    .cdd-scrollbar-loading {
       font-size: 14px;
       color: $scroll-color;
       line-height: 16px;
       text-align: center;
     }
-    .fl-scrollbar-bottom-line {
+    .cdd-scrollbar-bottom-line {
       padding: 30px 0;
       text-align: center;
       font-size: 16px;
@@ -89,7 +89,7 @@
         border-top: 1px dashed $scroll-color;
         margin-left: 28px;
       }
-      .fl-scrollbar-bottom-text {
+      .cdd-scrollbar-bottom-text {
         margin: 0 0 0 6px;
       }
     }
@@ -110,26 +110,26 @@
       transition: 0.3 background-color;
     }
 
-    &.fl-scrollbar-vertical {
+    &.cdd-scrollbar-vertical {
       width: 4px;
       top: 0;
       bottom: 0;
       right: 0;
-      .fl-scrollbar-thumb {
+      .cdd-scrollbar-thumb {
         width: 100%;
       }
     }
 
-    &.fl-scrollbar-horizontal {
+    &.cdd-scrollbar-horizontal {
       height: 4px;
       left: 0;
       right: 4px;
       bottom: 0;
-      .fl-scrollbar-thumb {
+      .cdd-scrollbar-thumb {
         height: 100%;
       }
     }
-    .fl-scrollbar-thumb {
+    .cdd-scrollbar-thumb {
       border-radius: 4px;
     }
   }

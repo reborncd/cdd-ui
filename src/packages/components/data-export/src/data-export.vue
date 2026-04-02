@@ -1,6 +1,6 @@
 <template>
   <span :class="ns.b()">
-    <fl-icon-button
+    <cdd-icon-button
       v-if="!slots['customize']"
       :icon="iconObj.icon"
       :iconStyle="iconObj.iconStyle"
@@ -8,7 +8,7 @@
       @click="exportClick"
     >
       {{ name || '' }}
-    </fl-icon-button>
+    </cdd-icon-button>
     <slot name="customize" :exportClick="exportClick" v-else></slot>
   </span>
 </template>

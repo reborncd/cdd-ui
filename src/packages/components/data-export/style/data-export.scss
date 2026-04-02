@@ -13,7 +13,7 @@
     border: solid 1px transparent !important;
     color: rgba(62, 86, 167, 1) !important;
     border-radius: 4px !important;
-    background: var(--fl-col-background-grey) !important;
+    background: var(--cdd-col-background-grey) !important;
     height: auto !important;
     width: auto !important;
     display: flex;
@@ -21,7 +21,7 @@
     box-sizing: border-box;
     padding: 9px !important;
     &:hover {
-      background: var(--fl-col-neutral9) !important;
+      background: var(--cdd-col-neutral9) !important;
     }
   }
 }
@@ -41,7 +41,7 @@
     margin-left: 36px;
     font-weight: 700;
     font-variation-settings: 'wght' 700;
-    color: var(--fl-col-maintext);
+    color: var(--cdd-col-maintext);
   }
   .iflorens-ui-notification-notice-description, .ant-notification-notice-description {
     margin-top: 4px;

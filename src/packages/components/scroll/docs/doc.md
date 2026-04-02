@@ -8,7 +8,7 @@
 <template>
 <div style="width: 100%; display: flex; height: 200px">
   <div style="flex:1">
-    <fl-scroll
+    <cdd-scroll
     trigger="hover"
     direction="all"
     :vBarStyle="{
@@ -31,7 +31,7 @@
         {{ item.text }}
       </li>
     </ol>
-  </fl-scroll>
+  </cdd-scroll>
   </div>
   <div style="width: 300px;"></div>
   </div>
@@ -83,7 +83,7 @@ export default {
 最大高度，最大宽度设置，`max-width="100px"` `max-height="200px"`不显示轨道
 ```vue demo
 <template>
-  <fl-scroll 
+  <cdd-scroll 
     max-width="100px"
     max-height="200px"
     direction="all">
@@ -125,7 +125,7 @@ export default {
       <li>UI - UI</li>
       <li>UI - UI</li>
     </ol>
-  </fl-scroll>
+  </cdd-scroll>
 </template>
 ```
 
@@ -134,7 +134,7 @@ export default {
 鼠标放上去触发显示坐标、设置轨道，滚动条样式
 ```vue demo
 <template>
-  <fl-scroll 
+  <cdd-scroll 
     ref="scrollbarRef"
     width="200px"
     height="200px"
@@ -145,7 +145,7 @@ export default {
       
       <li v-for="(item, index) in 30" :key="index">UI - UI一条{{item}}</li>
     </ol>
-  </fl-scroll>
+  </cdd-scroll>
   <br>
   <a-button size="small" @click="handleScrollTo">点击滚动指定位置</a-button>
 </template>

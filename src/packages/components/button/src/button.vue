@@ -11,7 +11,7 @@
     :disabled="disabled"
     :type="type"
   >
-    <fl-icon v-if="icon" :type="icon" :style="iconStyle"></fl-icon>
+    <cdd-icon v-if="icon" :type="icon" :style="iconStyle"></cdd-icon>
     <div class="button-content">
       <slot></slot>
     </div>
@@ -53,7 +53,7 @@ export default create({
 });
 </script>
 <style lang="scss" scoped>
-.fl-iconbutton {
+.cdd-iconbutton {
   display: inline-flex;
   align-items: center;
 }

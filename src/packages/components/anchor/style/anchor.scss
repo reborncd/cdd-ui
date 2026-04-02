@@ -10,15 +10,15 @@
   .iflorens-ui-anchor-wrapper {
     background-color: inherit;
   }
-  .fl-anchor :where(.css-19iuou).iflorens-ui-anchor-wrapper:not(.iflorens-ui-anchor-wrapper-horizontal) .iflorens-ui-anchor .iflorens-ui-anchor-ink {
+  .cdd-anchor :where(.css-19iuou).iflorens-ui-anchor-wrapper:not(.iflorens-ui-anchor-wrapper-horizontal) .iflorens-ui-anchor .iflorens-ui-anchor-ink {
     width: 0 !important;
     height: 22px !important;
-    border: 1px solid var(--fl-col-orange5) !important;
+    border: 1px solid var(--cdd-col-orange5) !important;
   }
   :where(.css-19iuou).iflorens-ui-anchor-wrapper:not(.iflorens-ui-anchor-wrapper-horizontal) .iflorens-ui-anchor .iflorens-ui-anchor-ink {
     width: 0 !important;
     height: 22px !important;
-    border: 1px solid var(--fl-col-orange5) !important;
+    border: 1px solid var(--cdd-col-orange5) !important;
   }
   :where(.css-dev-only-do-not-override-19iuou).iflorens-ui-anchor-wrapper:not(.iflorens-ui-anchor-wrapper-horizontal) .iflorens-ui-anchor::before {
     width: 2px !important;
@@ -28,7 +28,7 @@
   :where(.css-dev-only-do-not-override-19iuou).iflorens-ui-anchor-wrapper:not(.iflorens-ui-anchor-wrapper-horizontal) .iflorens-ui-anchor .iflorens-ui-anchor-ink {
     width: 0 !important;
     height: 22px !important;
-    border: 1px solid var(--fl-col-orange5) !important;
+    border: 1px solid var(--cdd-col-orange5) !important;
   }
   .iflorens-ui-anchor {
     padding: 1px 0;
@@ -41,13 +41,13 @@
       font-weight: 500;
     }
     .iflorens-ui-anchor-ink::before {
-      background: var(--fl-col-line);
+      background: var(--cdd-col-line);
     }
     .iflorens-ui-anchor-link-active > .iflorens-ui-anchor-link-title {
-      color: var(--fl-col-orange5);
+      color: var(--cdd-col-orange5);
     }
     a:hover {
-      color: var(--fl-col-orange5);
+      color: var(--cdd-col-orange5);
     }
   }
 }

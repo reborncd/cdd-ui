@@ -1,6 +1,6 @@
 <template>
   <div :class="ns.b()">
-    <fl-auto-complete
+    <cdd-auto-complete
       v-bind="attrs"
       :options="options"
       :paginationConfig="paginationConfig"

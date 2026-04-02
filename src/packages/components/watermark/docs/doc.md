@@ -6,9 +6,9 @@
 <template>
   <div>
         <a-button @click="showTest = !showTest">显示全局文字水印</a-button>
-        <fl-watermark :fullPage="true" v-if="showTest" font-color="#fa2c19" content="fl-ui"></fl-watermark>
+        <cdd-watermark :fullPage="true" v-if="showTest" font-color="#fa2c19" content="cdd-ui"></cdd-watermark>
         <a-button @click="showImg = !showImg">显示全局图片水印</a-button>
-        <fl-watermark v-if="showImg" class="mark1" :image-width="50" :image-height="50" :z-index="1" :image="img"></fl-watermark>
+        <cdd-watermark v-if="showImg" class="mark1" :image-width="50" :image-height="50" :z-index="1" :image="img"></cdd-watermark>
     </div>
 </template>
 
@@ -38,7 +38,7 @@ export default {
 ```vue demo
 <template>
     <div style="width: 100%;height: 300px;display: block;background: #fff;position: relative;">
-        <fl-watermark :fullPage="false" font-color="rgba(0, 0, 0, .15)" content="fl-ui"></fl-watermark>
+        <cdd-watermark :fullPage="false" font-color="rgba(0, 0, 0, .15)" content="cdd-ui"></cdd-watermark>
     </div>
 </template>
 

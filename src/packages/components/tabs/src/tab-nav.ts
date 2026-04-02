@@ -223,7 +223,7 @@ export default create({
             h(
               'span',
               {
-                class: ['fl-tabs__nav-prev', scrollable.value.prev ? '' : 'is-disabled'],
+                class: ['cdd-tabs__nav-prev', scrollable.value.prev ? '' : 'is-disabled'],
                 onClick: scrollPrev
               },
               [h(LeftOutlined, {
@@ -236,7 +236,7 @@ export default create({
             h(
               'span',
               {
-                class: ['fl-tabs__nav-next', scrollable.value.next ? '' : 'is-disabled'],
+                class: ['cdd-tabs__nav-next', scrollable.value.next ? '' : 'is-disabled'],
                 onClick: scrollNext
               },
               [h(RightOutlined, {
@@ -261,7 +261,7 @@ export default create({
           'div',
           {
             class: {
-              'fl-tabs__item': true,
+              'cdd-tabs__item': true,
               [`is-${rootTabs.props.tabPosition}`]: true,
               'is-active': pane.active,
               'is-disabled': pane.props.disabled,
@@ -295,14 +295,14 @@ export default create({
         'div',
         {
           ref: lui$,
-          class: ['fl-tabs__nav-wrap', scrollable.value ? 'is-scrollable' : '', `is-${rootTabs.props.tabPosition}`]
+          class: ['cdd-tabs__nav-wrap', scrollable.value ? 'is-scrollable' : '', `is-${rootTabs.props.tabPosition}`]
         },
         [
           scrollBtn,
           h(
             'div',
             {
-              class: 'fl-tabs__nav-scroll',
+              class: 'cdd-tabs__nav-scroll',
               ref: navScroll$
             },
             [
@@ -310,7 +310,7 @@ export default create({
                 'div',
                 {
                   class: [
-                    'fl-tabs__nav',
+                    'cdd-tabs__nav',
                     `is-${rootTabs.props.tabPosition}`,
                     props.stretch && ['top', 'bottom'].includes(rootTabs.props.tabPosition) ? 'is-stretch' : ''
                   ],

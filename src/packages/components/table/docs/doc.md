@@ -5,7 +5,7 @@
 ```vue demo
 <template>
     <div style="width: 100%">
-      <fl-table 
+      <cdd-table 
         :tableType="tableType"
         isBottomSolidBorder
         headerTextColor="#CCC"
@@ -29,16 +29,16 @@
           <!-- <Checkbox /> -->
         </template>
         <template #toolbar_buttons>
-          <fl-icon-button icon="iflorens-arrow-left-bold" :iconStyle="{}" type="line" @click="gridOptions.align = 'left'">居左</fl-icon-button>
-          <fl-icon-button icon="iflorens-InfoCircle" :iconStyle="{}" type="line" @click="gridOptions.align = 'center'">居中</fl-icon-button>
-          <fl-icon-button icon="iflorens-arrow-right-bold" :iconStyle="{}" type="line" @click="gridOptions.align = 'right'">居右</fl-icon-button>
-          <fl-icon-button icon="iflorens-PlusSquare" :iconStyle="{}" type="line" @click="gridOptions.rowConfig.height += 10">增加行高</fl-icon-button>
-          <fl-icon-button icon="iflorens-Sync" :iconStyle="{}" type="line" @click="gridOptions.rowConfig.height = 30">恢复行高</fl-icon-button>
-          <fl-icon-button icon="iflorens-Swap" :iconStyle="{}" type="line" @click="gridOptions.stripe = !gridOptions.stripe">是否需要斑马纹</fl-icon-button>
-          <fl-icon-button icon="iflorens-Swap" :iconStyle="{}" type="line" @click="gridOptions.rowConfig.isHover = !gridOptions.rowConfig.isHover">是否需要hover</fl-icon-button>
-          <fl-icon-button :iconStyle="{}" type="line" @click="tableType = tableType == 'wavy-line' ? '' : 'wavy-line'">切换主题</fl-icon-button>
-          <fl-icon-button :iconStyle="{}" type="line" @click="gridOptions.data=[{ id: 10002, name: 'Test2', nickname: 'T2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou',remark: '占位符' },]">动态渲染数据</fl-icon-button>
-          <fl-icon-button :iconStyle="{}" type="line" @click="gridOptions.columns=[{ 
+          <cdd-icon-button icon="iflorens-arrow-left-bold" :iconStyle="{}" type="line" @click="gridOptions.align = 'left'">居左</cdd-icon-button>
+          <cdd-icon-button icon="iflorens-InfoCircle" :iconStyle="{}" type="line" @click="gridOptions.align = 'center'">居中</cdd-icon-button>
+          <cdd-icon-button icon="iflorens-arrow-right-bold" :iconStyle="{}" type="line" @click="gridOptions.align = 'right'">居右</cdd-icon-button>
+          <cdd-icon-button icon="iflorens-PlusSquare" :iconStyle="{}" type="line" @click="gridOptions.rowConfig.height += 10">增加行高</cdd-icon-button>
+          <cdd-icon-button icon="iflorens-Sync" :iconStyle="{}" type="line" @click="gridOptions.rowConfig.height = 30">恢复行高</cdd-icon-button>
+          <cdd-icon-button icon="iflorens-Swap" :iconStyle="{}" type="line" @click="gridOptions.stripe = !gridOptions.stripe">是否需要斑马纹</cdd-icon-button>
+          <cdd-icon-button icon="iflorens-Swap" :iconStyle="{}" type="line" @click="gridOptions.rowConfig.isHover = !gridOptions.rowConfig.isHover">是否需要hover</cdd-icon-button>
+          <cdd-icon-button :iconStyle="{}" type="line" @click="tableType = tableType == 'wavy-line' ? '' : 'wavy-line'">切换主题</cdd-icon-button>
+          <cdd-icon-button :iconStyle="{}" type="line" @click="gridOptions.data=[{ id: 10002, name: 'Test2', nickname: 'T2', role: 'Test', sex: 'Women', age: 22, address: 'Guangzhou',remark: '占位符' },]">动态渲染数据</cdd-icon-button>
+          <cdd-icon-button :iconStyle="{}" type="line" @click="gridOptions.columns=[{ 
           field: 'sex', 
           title: 'sex', 
           sortable: true, 
@@ -46,10 +46,10 @@
             content: 'Click to Ascending Sort', 
             class: 'require-unit'
           } 
-        },]">动态渲染列</fl-icon-button>
-        <fl-icon-button :iconStyle="{}" type="line" @click="addData">新增数据</fl-icon-button>
+        },]">动态渲染列</cdd-icon-button>
+        <cdd-icon-button :iconStyle="{}" type="line" @click="addData">新增数据</cdd-icon-button>
         </template>
-      </fl-table>
+      </cdd-table>
     </div>
 </template>
 <script lang="ts">
@@ -195,11 +195,11 @@ export default {
 ```vue demo
 <template>
     <div style="width: 100%">
-      <fl-table 
+      <cdd-table 
         v-bind="gridOptions"
         v-on="gridEvents"
       >
-      </fl-table>
+      </cdd-table>
     </div>
 </template>
 <script lang="ts">
@@ -344,14 +344,14 @@ export default {
 ```vue demo
 <template>
     <div style="width: 100%">
-      <fl-table 
+      <cdd-table 
         tableType='wavy-line'
         v-bind="gridOptions"
         :scroll-y="{ enabled: true }"
         :pager-config="pagerConfig"
         @pageChange="onPageChange"
       >
-      </fl-table>
+      </cdd-table>
     </div>
 </template>
 <script lang="ts">
@@ -431,14 +431,14 @@ export default {
 ```vue demo
 <template>
     <div style="width: 100%">
-      <fl-table 
+      <cdd-table 
         tableType='wavy-line'
         v-bind="gridOptions"
         :scroll-y="{ enabled: true }"
         :pager-config="pagerConfig"
         @pageChange="onPageChange"
       >
-      </fl-table>
+      </cdd-table>
     </div>
 </template>
 <script lang="ts">
@@ -540,7 +540,7 @@ VxeUI.setConfig({
 ```vue demo
 <template>
     <div style="width: 100%">
-      <fl-table 
+      <cdd-table 
         :tableType="tableType"
         isBottomSolidBorder
         headerTextColor="#CCC"
@@ -582,7 +582,7 @@ VxeUI.setConfig({
         <template #remark={row}>
           <div class="edit-table-vxe-cel">{{ row.remark }}</div>
         </template>
-      </fl-table>
+      </cdd-table>
     </div>
 </template>
 <script lang="ts">

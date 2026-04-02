@@ -15,7 +15,7 @@
         padding: 0;
         border-radius: 16px;
         .iflorens-ui-modal-title {
-            border-bottom: solid 1px var(--fl-col-line);
+            border-bottom: solid 1px var(--cdd-col-line);
             height: 64px;
             line-height: 64px;
             padding: 0 24px;
@@ -25,7 +25,7 @@
             padding: 24px;
         }
         .iflorens-ui-modal-footer {
-            border-top: solid 1px var(--fl-col-line);
+            border-top: solid 1px var(--cdd-col-line);
             height: 64px;
             line-height: 64px;
             padding: 0 24px;
@@ -35,11 +35,11 @@
                 padding: 0px 15px;
             }
             button.iflorens-ui-btn-default {
-                color: var(--fl-col-fblue5);
-                border: 1px solid var(--fl-col-line);
+                color: var(--cdd-col-fblue5);
+                border: 1px solid var(--cdd-col-line);
             }
             button.iflorens-ui-btn-primary {
-                background: var(--fl-col-fblue5);
+                background: var(--cdd-col-fblue5);
                 color: #fff;
             }
         }

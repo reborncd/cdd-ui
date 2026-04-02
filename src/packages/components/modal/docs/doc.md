@@ -6,14 +6,14 @@
 <template>
   <div>
     <a-button type="primary" @click="showModal">Open Modal</a-button>
-    <fl-modal v-model:open="open" title="Basic Modal" @ok="handleOk" okText="确定" cancelText="取消">
+    <cdd-modal v-model:open="open" title="Basic Modal" @ok="handleOk" okText="确定" cancelText="取消">
       <!-- <template #footer>
         <a-button type="primary" @click="handleOk">111</a-button>
       </template> -->
       <p>Some contents...</p>
       <p>Some contents...</p>
       <p>Some contents...</p>
-    </fl-modal>
+    </cdd-modal>
   </div>
 </template>
 <script lang="ts">

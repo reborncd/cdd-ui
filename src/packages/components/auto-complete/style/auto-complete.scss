@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 4px 6px;
-    background: var(--fl-col-background-grey);
+    background: var(--cdd-col-background-grey);
     .header-title {
       span {
         flex: 1;
@@ -39,6 +39,6 @@
     }
   }
   .option-fields  {
-    border-bottom: 1px dashed var(--fl-col-line);
+    border-bottom: 1px dashed var(--cdd-col-line);
   }
 }

@@ -9,14 +9,14 @@
     flex-direction: row;
     justify-content: start;
     &.is-show-header-boder {
-      border-bottom: 1px solid var(--fl-col-line);
+      border-bottom: 1px solid var(--cdd-col-line);
     }
   }
   @include m(right) {
     .#{$namespace}-tabs__header.is-right {
       &.is-show-header-boder {
         border: none;
-        border-left: 1px solid var(--fl-col-line);
+        border-left: 1px solid var(--cdd-col-line);
       }
     }
   }
@@ -24,7 +24,7 @@
     .#{$namespace}-tabs__header.is-left {
       &.is-show-header-boder {
         border: none;
-        border-right: 1px solid var(--fl-col-line);
+        border-right: 1px solid var(--cdd-col-line);
       }
     }
   }
@@ -35,7 +35,7 @@
     left: 0;
     height: 4px;
     border-radius: 4px;
-    background: var(--fl-col-orange5);
+    background: var(--cdd-col-orange5);
     z-index: 1;
     list-style: none;
   }
@@ -65,7 +65,7 @@
       left: 0;
       bottom: 0;
       width: 100%;
-      z-index: var(--fl-index-normal);
+      z-index: var(--cdd-index-normal);
     }
 
     @include when(scrollable) {
@@ -94,9 +94,9 @@
   @include e(nav) {
     white-space: nowrap;
     position: relative;
-    transition: transform var(--fl-transition-duration);
+    transition: transform var(--cdd-transition-duration);
     float: left;
-    z-index: calc(var(--fl-index-normal) + 1);
+    z-index: calc(var(--cdd-index-normal) + 1);
 
     @include when(stretch) {
       min-width: 100%;
@@ -141,16 +141,16 @@
     }
 
     @include when(active) {
-      color: var(--fl-col-orange5);
+      color: var(--cdd-col-orange5);
     }
 
     &:hover {
-      color: var(--fl-col-orange5);
+      color: var(--cdd-col-orange5);
       cursor: pointer;
     }
 
     @include when(disabled) {
-      color: var(--fl-col-disabledtext);
+      color: var(--cdd-col-disabledtext);
       cursor: default;
     }
   }
@@ -168,7 +168,7 @@
         margin-left: 0;
       }
       &.is-active {
-        background: var(--fl-col-orange10);
+        background: var(--cdd-col-orange10);
       }
     }
   }

@@ -3,7 +3,7 @@
     <div class="right-cnt-top" :style="`height: calc(100% - ${rightBottomHeight}px)`" ref="cntTopCommentaryRef">
       <div class="right-cnt-top-cnt">
         <div v-if="commentaryList.length" class="right-cnt-top-cnt-ul">
-          <fl-comment-item
+          <cdd-comment-item
             v-for="(item, index) in commentaryList"
             :class="[
               'right-cnt-top-cnt-li',
@@ -27,14 +27,14 @@
             <template v-if="Boolean(slots['title-box'])" #title-box>
               <slot name="title-box" :row="item"></slot>
             </template>
-          </fl-comment-item>
+          </cdd-comment-item>
         </div>
-        <fl-empty
+        <cdd-empty
           v-else
           :image="emptyObj.emptyCommentarySvg"
           :description="emptyObj.description"
           class="commentary-empty"
-        ></fl-empty>
+        ></cdd-empty>
       </div>
     </div>
     <div
@@ -54,7 +54,7 @@
                 }
           " -->
       <div class="right-cnt-bottom-cnt">
-        <fl-comment-textarea
+        <cdd-comment-textarea
           class="comment-content-save"
           v-model="saveValue"
           ref="fullScreenTextareaRef"

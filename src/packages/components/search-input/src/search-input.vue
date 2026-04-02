@@ -8,7 +8,7 @@
     @pressEnter="inputPressEnter"
   >
     <template #prefix>
-      <fl-icon :type="iconObj.icon" :style="iconObj.iconStyle" class="search-icon"></fl-icon>
+      <cdd-icon :type="iconObj.icon" :style="iconObj.iconStyle" class="search-icon"></cdd-icon>
     </template>
   </a-input>
 </template>
@@ -58,7 +58,7 @@ export default create({
 @include b(search-input) {
   :deep(.iflorens-ui-input) {
     border: none;
-    background: var(--fl-col-background-grey);
+    background: var(--cdd-col-background-grey);
     height: 30px;
     line-height: 30px;
   }

@@ -5,9 +5,9 @@
 ```vue demo
 <template>
   <div>
-    <fl-popover v-model:open="visible" trigger="click" @cancelBtn="cancelBtn" @deleteBtn="deleteBtn">
+    <cdd-popover v-model:open="visible" trigger="click" @cancelBtn="cancelBtn" @deleteBtn="deleteBtn">
         <a-button>点击</a-button>
-    </fl-popover>
+    </cdd-popover>
   </div>
 </template>
 <script lang="ts">
@@ -45,12 +45,12 @@ export default {
 ```vue demo
 <template>
   <div>
-    <fl-popover v-model:open="visible" trigger="click" @cancelBtn="cancelBtn" @deleteBtn="deleteBtn">
+    <cdd-popover v-model:open="visible" trigger="click" @cancelBtn="cancelBtn" @deleteBtn="deleteBtn">
         <a-button>点击</a-button>
         <template #content>
             ceshi
         </template>
-    </fl-popover>
+    </cdd-popover>
   </div>
 </template>
 <script lang="ts">

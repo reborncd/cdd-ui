@@ -30,7 +30,7 @@ export default create({
 </script>
 
 <style lang="scss" scoped>
-:deep(.fl-dropdown) {
+:deep(.cdd-dropdown) {
   width: auto;
 }
 .resize-handle {
@@ -40,7 +40,7 @@ export default create({
   bottom: 0;
   width: 1px;
   cursor: ew-resize;
-  background: var(--fl-col-neutral9);
+  background: var(--cdd-col-neutral9);
   &:hover {
     width: 5px;
     background: red;
@@ -55,20 +55,20 @@ export default create({
 }
 :deep(.vxe-table--render-default) {
   .vxe-table--resizable-bar:before {
-    background: var(--fl-col-fblue5);
+    background: var(--cdd-col-fblue5);
   }
 }
 :deep(.vxe-header--column) {
   .vxe-resizable {
     height: 50%;
-    background: var(--fl-col-neutral9);
+    background: var(--cdd-col-neutral9);
     top: 50%;
     transform: translate(0, -50%);
     width: 1px;
     right: 0;
     &:hover {
       width: 5px;
-      background: var(--fl-col-fblue5);
+      background: var(--cdd-col-fblue5);
     }
   }
   .is--line {

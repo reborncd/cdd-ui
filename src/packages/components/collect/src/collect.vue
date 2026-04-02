@@ -5,7 +5,7 @@
       <a-col v-if="isShowCollectBtn&&colorMode!=='darkBlue'" class="content-title-icon">
         <a-tooltip :title="isCustomize ? (!iconBtnStatus ? tipAddText : tipRemoveText) : !isFavorite ? tipAddText : tipRemoveText
           ">
-          <fl-icon-button id="user-guide-target" @click="iconClick" :icon="isCustomize
+          <cdd-icon-button id="user-guide-target" @click="iconClick" :icon="isCustomize
             ? !iconBtnStatus
               ? startOutIcon.icon
               : starFilledIcon.icon
@@ -20,7 +20,7 @@
                 ? startOutIcon.iconStyle
                 : starFilledIcon.iconStyle
               " type="link" size="small">
-          </fl-icon-button>
+          </cdd-icon-button>
         </a-tooltip>
       </a-col>
       <a-col>

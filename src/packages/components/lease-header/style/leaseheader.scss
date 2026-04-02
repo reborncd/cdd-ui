@@ -5,7 +5,7 @@
 
 @include b(leaseheader) {
   padding: 0 0 12px 0;
-  border-bottom: 1px solid var(--fl-col-line);
+  border-bottom: 1px solid var(--cdd-col-line);
   overflow: hidden;
   .lease-header-cnt {
     width: 100%;
@@ -19,7 +19,7 @@
     height: 32px;
     display: flex;
     align-items: center;
-    color: var(--fl-col-maintext);
+    color: var(--cdd-col-maintext);
     .icon-arrow {
       font-size: 20px;
       cursor: pointer;

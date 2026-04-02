@@ -12,10 +12,10 @@
       <template #description>
         {{ description }}
         <div class="empty-btn" @click="btnClick" v-if="isShowBtn">
-          <fl-icon
+          <cdd-icon
             :type="btnIcon.type"
             :style="btnIcon.style"
-          ></fl-icon>
+          ></cdd-icon>
           {{ btnName }}
         </div>
         <slot></slot>

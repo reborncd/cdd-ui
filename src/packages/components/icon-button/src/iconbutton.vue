@@ -63,7 +63,7 @@ export default create({
 });
 </script>
 <style lang="scss" scoped>
-.fl-iconbutton {
+.cdd-iconbutton {
   display: inline-flex;
   align-items: center;
 }

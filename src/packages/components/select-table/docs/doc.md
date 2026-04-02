@@ -4,7 +4,7 @@
 ```vue demo
 <template>
   <div style="width: 300px">
-    <fl-select-table
+    <cdd-select-table
       ref="selectTableRef"
       v-model="multipleValue"
       selectStyle="width: 100%"
@@ -74,7 +74,7 @@ const onLoadMore = (e) => {
 ```vue demo
 <template>
   <div style="width: 300px">
-    <fl-select-table
+    <cdd-select-table
       ref="selectTableRef"
       v-model="multipleValue"
       selectStyle="width: 100%"
@@ -135,7 +135,7 @@ const onSearch = (value) => {
 ```vue demo
 <template>
   <div style="width: 300px">
-    <fl-select-table
+    <cdd-select-table
       ref="autoCompleteTableRef"
       v-bind="parmas"
       v-model="modelValue"
@@ -188,7 +188,7 @@ const parmas = reactive({
 ```vue demo
 <template>
   <div style="width: 300px">
-    <fl-select-table
+    <cdd-select-table
       ref="selectTableRef"
       v-model="multipleValue"
       selectStyle="width: 100%"
@@ -250,7 +250,7 @@ const onSelect = (value) => {
 ```vue demo
 <template>
   <div style="width: 300px">
-    <fl-select-table
+    <cdd-select-table
       ref="selectTableRef"
       v-model="multipleValue"
       selectStyle="width: 100%"
@@ -312,7 +312,7 @@ const onSelect = (value) => {
 ```vue demo
 <template>
   <div style="width: 300px">
-    <fl-select-table
+    <cdd-select-table
       ref="selectTableRef"
       v-model="multipleValue"
       selectStyle="width: 100%"
@@ -332,14 +332,14 @@ const onSelect = (value) => {
       @select="onSelect"
     >
       <template #tagRender="tagRenderItem">
-        <fl-tag :closable="tagRenderItem.closable" style="margin-right: 3px" @close="tagRenderItem.onClose">
+        <cdd-tag :closable="tagRenderItem.closable" style="margin-right: 3px" @close="tagRenderItem.onClose">
           <InfoCircleOutlined style="margin-right: 3px"/>
           <span>{{ tagRenderItem.option.label }}</span>
           <span>{{ tagRenderItem.option.value }}</span>
           <span></span>
-        </fl-tag>
+        </cdd-tag>
       </template>
-    </fl-select-table>
+    </cdd-select-table>
   </div>
 </template>
 <script lang="ts" setup>
@@ -382,7 +382,7 @@ const onSelect = (value) => {
 ```vue demo
 <template>
   <div style="width: 300px">
-    <fl-select-table
+    <cdd-select-table
       ref="selectTableRef"
       v-model="multipleValue"
       selectStyle="width: 100%"

@@ -4,7 +4,7 @@
     <div
       :class="{
         [ns.b()]: true,
-        'fl-dropdown--card': type === 'card'
+        'cdd-dropdown--card': type === 'card'
       }"
       @click="downClick"
     >
@@ -22,14 +22,14 @@
             'icon-box': true
           }"
         >
-          <fl-icon
+          <cdd-icon
             v-if="!(type === 'card' && options.length == 0)"
             type="iflorens-arrow-down-bold"
             :style="{
               fontSize: '14px',
               color: 'rgba(0, 0, 0, 0.85)'
             }"
-          ></fl-icon>
+          ></cdd-icon>
         </div>
       </template>
       <template v-else>
@@ -37,15 +37,15 @@
       </template>
     </div>
     <template #overlay>
-      <a-menu class="fl-dropdown-ul" v-if="options.length > 0" v-model="isClickDown">
+      <a-menu class="cdd-dropdown-ul" v-if="options.length > 0" v-model="isClickDown">
         <template v-if="isShowAll">
           <a-menu-item @click="liClick('All')"> All </a-menu-item>
           <a-menu-divider />
         </template>
         <a-menu-item
           :class="{
-            'fl-dropdown-li': true,
-            'fl-dropdown-li-active': item === modelValue ? true : false
+            'cdd-dropdown-li': true,
+            'cdd-dropdown-li-active': item === modelValue ? true : false
           }"
           v-for="(item, index) in options"
           :key="item"
@@ -53,7 +53,7 @@
         >
           <div class="li-item">
             <span class="li-item-text">
-              <fl-tooltip-ellipsis
+              <cdd-tooltip-ellipsis
                 v-if="dropdownWidth"
                 :width="dropdownWidth + 'px'"
                 :content="item"
@@ -61,11 +61,11 @@
                 overlayClassName="resourceDesc"
                 :tooltipTrigger="'hover'"
               >
-              </fl-tooltip-ellipsis>
+              </cdd-tooltip-ellipsis>
               <span v-else>{{ item }}</span>
             </span>
             <a-popconfirm
-              overlayClassName="fl-dropdown-del"
+              overlayClassName="cdd-dropdown-del"
               title="Are you sure you want to delete?"
               ok-text="Delete"
               cancel-text="Cancel"
@@ -77,24 +77,24 @@
                 }
               "
             >
-              <fl-icon
+              <cdd-icon
                 type="iflorens-DeleteOutlined"
                 v-if="isShowDelIcon"
                 @click.stop="() => {}"
                 style="color: red"
-              ></fl-icon>
+              ></cdd-icon>
             </a-popconfirm>
           </div>
         </a-menu-item>
       </a-menu>
       <!-- 没数据 -->
-      <a-menu v-else-if="!options.length && showEmpty" class="fl-dropdown-ul fl-dropdown-no-data">
-        <a-menu-item v-if="isShowAll" class="fl-dropdown-li" @click="liClick('All')">
+      <a-menu v-else-if="!options.length && showEmpty" class="cdd-dropdown-ul cdd-dropdown-no-data">
+        <a-menu-item v-if="isShowAll" class="cdd-dropdown-li" @click="liClick('All')">
           <div>All</div>
           <a-menu-divider />
         </a-menu-item>
-        <a-menu-item class="fl-dropdown-li">
-          <fl-empty type="simpleImage" description="No Data" />
+        <a-menu-item class="cdd-dropdown-li">
+          <cdd-empty type="simpleImage" description="No Data" />
         </a-menu-item>
       </a-menu>
     </template>
@@ -155,7 +155,7 @@ export default create({
       if (!props.isShowDown) {
         return;
       }
-      // const downs = document.getElementsByClassName('fl-dropdown')
+      // const downs = document.getElementsByClassName('cdd-dropdown')
       // for(let i = 0; i < downs.length; i++) {
       //   const node = downs[i] as HTMLElement
       //   const iconBox = node.getElementsByClassName('icon-box')[0] as HTMLElement

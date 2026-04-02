@@ -4,9 +4,9 @@
 
 ```vue demo
 <template>
-    <fl-collect title="Lease Contract" :request="fetch">
+    <cdd-collect title="Lease Contract" :request="fetch">
       
-    </fl-collect>
+    </cdd-collect>
 </template>
 
 <script lang="ts">
@@ -27,7 +27,7 @@ export default {
 
 ```vue demo
 <template>
-    <fl-collect title="Lease Contract" :isCustomize="true" :iconBtnStatus="btnStatus" @iconClick="iconClick"></fl-collect>
+    <cdd-collect title="Lease Contract" :isCustomize="true" :iconBtnStatus="btnStatus" @iconClick="iconClick"></cdd-collect>
 </template>
 
 <script lang="ts">

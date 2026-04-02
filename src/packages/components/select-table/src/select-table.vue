@@ -1,6 +1,6 @@
 <template>
-  <div class="fl-async-select-table">
-    <fl-select
+  <div class="cdd-async-select-table">
+    <cdd-select
       v-bind="attrs"
       :modelValue="modelValue"
       :options="options"
@@ -27,7 +27,7 @@
       <template v-if="Boolean(slots['tagRender'])" #tagRender="tagRenderItem">
         <slot name="tagRender" v-bind="tagRenderItem" v-on="tagRenderItem"></slot>
       </template>
-    </fl-select>
+    </cdd-select>
   </div>
 </template>
 
