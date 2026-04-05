@@ -1,12 +1,13 @@
 {
-  "name": "zyhy-ui",
+  "name": "cdd-ui",
   "version": "0.1.4",
   "description": "",
   "main": "index.js",
   "keywords": [
     "vue component",
     "vue3 component",
-    "vite"
+    "vite",
+    "cdd-ui"
   ],
   "files": [
     "dist",
